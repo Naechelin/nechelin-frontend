@@ -1,0 +1,27 @@
+.QRcodeScanner {
+	position: relative;
+	text-align: center;
+	overflow: visible;
+	background-color: black;
+	height: 640px;
+	z-index: 1000;
+}
+
+.QRcodeScanner label {
+	float: left;
+	margin-left: 24%;
+	margin-top: 100px;
+	position: relative;
+	font-size: 150px;
+	color: white;
+}
+
+.QRcodeScanner button {
+	font-size: 25px;
+	width: 420px;
+	height: 50px;
+	border-radius: 5px;
+	border: 1px solid black;
+	background-color: aliceblue;
+	margin-top: 50px;
+}

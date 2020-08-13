@@ -7,7 +7,8 @@ import OwnerAppHeader from "./Components/OwnerLayout/OwnerAppHeader/OwnerAppHead
 import OwnerAppMiddle from "./Components/OwnerLayout/OwnerAppMiddle/OwnerAppMiddle";
 import OwnerAppFooter from "./Components/OwnerLayout/OwnerAppFooter/OwnerAppFooter";
 import "./App.css";
-import {BrowserRouter as Router} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+
 function App() {
 	let member_type = "owner";
 	if (member_type === "customer")

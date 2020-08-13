@@ -1,5 +1,6 @@
 .OwnerAppMiddle {
-	min-height: 590px;
-	max-height: 590px;
-	overflow: hidden;
+	position: relative;
+	min-height: 575px;
+	max-height: 575px;
+	overflow: visible;
 }
