@@ -1,0 +1,18 @@
+.CouponPaper {
+	max-width: 90%;
+	min-height: 150px;
+	max-height: 200px;
+	overflow: hidden;
+	border: 1px solid gray;
+	padding: 10px;
+}
+.CouponPaper .CouponPaperContent {
+	float: left;
+	margin-left: 0px;
+	width: 60%;
+}
+.CouponPaper .CouponPaperImage {
+	float: right;
+	margin-right: 0px;
+	width: 40%;
+}

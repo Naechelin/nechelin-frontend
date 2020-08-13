@@ -1,0 +1,49 @@
+.Store .store {
+	max-height: 590px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	scrollbar-width: none;
+	scroll-behavior: smooth;
+	-ms-overflow-style: none;
+}
+.Store ::-webkit-scrollbar {
+	scroll-behavior: smooth;
+	display: none;
+}
+.Store #backgroundPhoto {
+	width: 100%;
+	height: 250px;
+}
+.Store .StoreScore {
+	float: left;
+	margin-left: 10px;
+}
+.Store h2 {
+	text-align: left;
+	margin-left: 40%;
+}
+.Store .StoreInfo label {
+	float: right;
+	margin-top: -40px;
+	margin-right: 35%;
+}
+
+.Store ul {
+	font-size: 15px;
+	text-align: left;
+	list-style: none;
+	padding: 10px;
+	margin: 10px;
+}
+
+.Store .text {
+	text-align: left;
+	padding: 10px;
+}
+
+.Store .text button {
+	border-radius: 5px;
+	border: 1px solid gray;
+	float: right;
+	margin-right: 5%;
+}

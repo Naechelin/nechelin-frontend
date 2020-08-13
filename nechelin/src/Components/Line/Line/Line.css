@@ -1,0 +1,61 @@
+.Line #search {
+	margin-top: 10px;
+	margin-left: 10px;
+	padding-left: 10px;
+	width: 85%;
+	height: 25px;
+}
+
+.Line #searchBtn {
+	margin-top: 10px;
+}
+
+.Line .LineQuest {
+	padding: 5px;
+	margin-top: 10px;
+	margin-left: 10%;
+	border: 1px solid gray;
+	width: 75%;
+	height: 180px;
+}
+
+.Line .LineCurrent {
+	font-size: 14px;
+	text-align: left;
+	padding: 5px;
+	margin-left: 10%;
+	border: 1px solid gray;
+	height: 40px;
+	width: 75%;
+}
+.Line span {
+	float: left;
+	border: 1px solid gray;
+	padding: 4px;
+}
+.Line .LinkTab {
+	float: left;
+	color: black;
+	border: 1px solid gray;
+	padding: 10px;
+	margin-left: 1px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.Line ol {
+	height: 200px;
+	max-height: 200px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.Line ol {
+	scrollbar-width: none;
+	scroll-behavior: smooth;
+	-ms-overflow-style: none;
+}
+.Line ol::-webkit-scrollbar {
+	scroll-behavior: smooth;
+	display: none;
+}

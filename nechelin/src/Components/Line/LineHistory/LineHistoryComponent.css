@@ -1,0 +1,12 @@
+.LineHistoryComponent {
+	height: 50px;
+	min-width: 100px;
+	margin: 10px;
+	border-radius: 5px;
+}
+.LineHistoryComponent span {
+	background-color: #ffffe6;
+	height: 20px;
+	min-width: 30%;
+	font-size: small;
+}

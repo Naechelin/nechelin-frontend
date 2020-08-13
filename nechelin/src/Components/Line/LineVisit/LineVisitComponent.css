@@ -1,0 +1,16 @@
+.LineVisitComponent {
+	height: 50px;
+	min-width: 100px;
+	margin: 10px;
+}
+.LineVisitComponent span {
+	background-color: #ffffe6;
+	height: 20px;
+	min-width: 45%;
+	font-size: small;
+}
+
+.LineVisitComponent a {
+	text-decoration: none;
+	color: black;
+}
