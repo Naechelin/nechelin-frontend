@@ -1,0 +1,14 @@
+.OwnerAppFooter {
+	position: relative;
+	height: 100%;
+	background-color: rgb(238, 238, 238);
+	overflow: hidden;
+}
+.OwnerAppFooter button {
+	position: relative;
+	width: 30%;
+	height: 50px;
+	max-height: 10%;
+	border: none;
+	background-color: rgb(238, 238, 238);
+}
