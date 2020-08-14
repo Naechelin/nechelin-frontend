@@ -12,7 +12,9 @@
 	margin-left: 2%;
 }
 .OwnerAppHeader #logo {
-	margin-left: 35%;
+	margin-top: -10px;
+	margin-left: 31%;
+	width: 100px;
 }
 .OwnerAppHeader #QRcode {
 	float: right;
@@ -20,10 +22,16 @@
 }
 .OwnerAppHeader #bookMark {
 	float: left;
-	margin-left: 100px;
+	margin-left: 90px;
 }
-.OwnerAppHeader #faBell {
+.OwnerAppHeader #bell {
 	float: right;
 	margin-top: 3%;
 	margin-right: 2%;
+	width: 50px;
+}
+.OwnerAppHeader #bell:hover {
+	margin-top: 2%;
+	margin-right: 1%;
+	width: 55px;
 }

@@ -36,13 +36,7 @@ class UserAppHeader extends PureComponent {
 					size="2x"
 					color="brown"
 				/>
-				<FontAwesomeIcon
-					icon={faBell}
-					id="faBell"
-					size="2x"
-					color="yellow"
-					onClick={this.openAlarm}
-				/>
+				<img src="/images/bell.png" alt="bell" id="bell" />
 			</div>
 		);
 	}

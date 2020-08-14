@@ -43,7 +43,7 @@
 
 .Store .text button {
 	border-radius: 5px;
-	border: 1px solid gray;
+	border: 1px solid rgb(189, 185, 185);
 	float: right;
 	margin-right: 5%;
 }

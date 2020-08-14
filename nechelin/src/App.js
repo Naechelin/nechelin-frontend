@@ -10,37 +10,45 @@ import "./App.css";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 function App() {
-	let member_type = "owner";
+	let member_type = "customer";
 	if (member_type === "customer")
 		return (
-			<div className="App">
-				<Router>
-					<header className="header">
-						<UserAppHeader />
-					</header>
-					<div className="middle">
-						<UserAppMiddle />
-					</div>
-					<footer className="footer">
-						<UserAppFooter />
-					</footer>
-				</Router>
+			<div>
+				<img src="/images/spoon.png" alt="spoon" id="spoon" />
+				<div className="App">
+					<Router>
+						<header className="header">
+							<UserAppHeader />
+						</header>
+						<div className="middle">
+							<UserAppMiddle />
+						</div>
+						<footer className="footer">
+							<UserAppFooter />
+						</footer>
+					</Router>
+				</div>
+				<img src="/images/fork.png" alt="fork" id="fork" />
 			</div>
 		);
 	if (member_type === "owner")
 		return (
-			<div className="App">
-				<Router>
-					<header className="header">
-						<OwnerAppHeader />
-					</header>
-					<div className="middle">
-						<OwnerAppMiddle />
-					</div>
-					<footer className="footer">
-						<OwnerAppFooter />
-					</footer>
-				</Router>
+			<div>
+				<img src="/images/spoon.png" alt="spoon" id="spoon" />
+				<div className="App">
+					<Router>
+						<header className="header">
+							<OwnerAppHeader />
+						</header>
+						<div className="middle">
+							<OwnerAppMiddle />
+						</div>
+						<footer className="footer">
+							<OwnerAppFooter />
+						</footer>
+					</Router>
+				</div>
+				<img src="/images/fork.png" alt="fork" id="fork" />
 			</div>
 		);
 }

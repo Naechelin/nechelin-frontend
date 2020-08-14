@@ -3,8 +3,12 @@
 	min-height: 150px;
 	max-height: 200px;
 	overflow: hidden;
-	border: 1px solid gray;
+	border: 1px solid rgb(189, 185, 185);
 	padding: 10px;
+}
+
+.CouponPaper li {
+	color: gray;
 }
 .CouponPaper .CouponPaperContent {
 	float: left;

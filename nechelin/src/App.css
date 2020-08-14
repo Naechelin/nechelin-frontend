@@ -1,3 +1,15 @@
+#spoon {
+	float: left;
+	margin-left: 210px;
+	margin-top: 80px;
+	height: 500px;
+}
+#fork {
+	float: right;
+	margin-right: 330px;
+	margin-top: 35px;
+	height: 550px;
+}
 .App {
 	position: absolute;
 	z-index: 100;
@@ -41,7 +53,7 @@
 }
 
 .App-link {
-	color: #61dafb;
+	color: black;
 }
 
 @keyframes App-logo-spin {

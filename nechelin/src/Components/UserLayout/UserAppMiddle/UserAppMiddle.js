@@ -16,6 +16,9 @@ class UserAppMiddle extends PureComponent {
 					<Route exact path="/App">
 						<Line />
 					</Route>
+					<Route exact path="/App/Home">
+						<Line />
+					</Route>
 					<Route path="/App/Line">
 						<Line />
 					</Route>
