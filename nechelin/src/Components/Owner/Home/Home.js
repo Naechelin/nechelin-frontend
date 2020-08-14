@@ -7,7 +7,7 @@ class Home extends Component {
 		return (
 			<div className="Home">
 				<ul>
-					<Link to="/QRcodeScanner?storeNum=1">
+					<Link to="/App/QRcodeScanner?storeNum=1">
 						<li>
 							<img
 								src="/images/background.png"
@@ -17,7 +17,7 @@ class Home extends Component {
 							<label>QR코드 스캐너</label>
 						</li>
 					</Link>
-					<Link to="/QRcodeScanner?storeNum=2">
+					<Link to="/App/QRcodeScanner?storeNum=2">
 						<li>
 							<img
 								src="/images/background.png"

@@ -6,7 +6,7 @@ class LineVisitComponent extends Component {
 		return (
 			<div className="LineVisitComponent">
 				<span>
-					<Link to="/Store?매장명">방문한 가게</Link>
+					<Link to="/App/Store?매장명">방문한 가게</Link>
 				</span>
 				<span>리뷰쓰기</span>
 			</div>

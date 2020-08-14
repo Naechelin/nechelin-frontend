@@ -21,7 +21,7 @@ class UserAppFooter extends PureComponent {
 	render() {
 		return (
 			<div className="UserAppFooter">
-				<Link to="/Line">
+				<Link to="/App/Line">
 					<button>
 						<FontAwesomeIcon
 							icon={faFlag}
@@ -34,7 +34,7 @@ class UserAppFooter extends PureComponent {
 					</button>
 				</Link>
 
-				<Link to="/Map">
+				<Link to="/App/Map">
 					<button>
 						<FontAwesomeIcon
 							icon={faMapMarkedAlt}
@@ -45,7 +45,7 @@ class UserAppFooter extends PureComponent {
 						맛있을 지도
 					</button>
 				</Link>
-				<Link to="/Coupon">
+				<Link to="/App/Coupon">
 					<button>
 						<FontAwesomeIcon
 							icon={faGift}

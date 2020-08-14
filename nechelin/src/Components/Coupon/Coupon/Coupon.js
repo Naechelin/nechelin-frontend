@@ -7,10 +7,10 @@ class Coupon extends PureComponent {
 	render() {
 		return (
 			<div className="Coupon">
-				<Link to="/Coupon/CouponAvailable">
+				<Link to="/App/Coupon/CouponAvailable">
 					<span className="CouponTab">사용 가능한 쿠폰</span>
 				</Link>
-				<Link to="/Coupon/CouponHistory">
+				<Link to="/App/Coupon/CouponHistory">
 					<span className="CouponTab">사용 내역</span>
 				</Link>
 				<hr />

@@ -1,7 +1,7 @@
 import React, {PureComponent} from "react";
 import "./OwnerAppHeader.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBars, faBell} from "@fortawesome/free-solid-svg-icons";
+import {faBars, faBookmark, faBell} from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
 
 class OwnerAppHeader extends PureComponent {
@@ -29,7 +29,12 @@ class OwnerAppHeader extends PureComponent {
 						width="15%"
 					></img>
 				</Link>
-
+				<FontAwesomeIcon
+					id="bookMark"
+					icon={faBookmark}
+					size="2x"
+					color="brown"
+				/>
 				<FontAwesomeIcon
 					icon={faBell}
 					id="faBell"

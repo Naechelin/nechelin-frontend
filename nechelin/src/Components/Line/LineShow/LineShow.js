@@ -12,13 +12,16 @@ class LineShow extends PureComponent {
 					<Route exact path="/">
 						<LineVisit />
 					</Route>
-					<Route exact path="/Line">
+					<Route exact path="/App">
 						<LineVisit />
 					</Route>
-					<Route path="/Line/LineVisit">
+					<Route exact path="/App/Line">
 						<LineVisit />
 					</Route>
-					<Route path="/Line/LineHistory">
+					<Route path="/App/Line/LineVisit">
+						<LineVisit />
+					</Route>
+					<Route path="/App/Line/LineHistory">
 						<LineHistory />
 					</Route>
 				</Switch>

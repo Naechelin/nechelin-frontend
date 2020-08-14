@@ -17,7 +17,7 @@ class OwnerAppFooter extends PureComponent {
 	render() {
 		return (
 			<div className="OwnerAppFooter">
-				<Link to="/Home">
+				<Link to="/App/Home">
 					<button>
 						<FontAwesomeIcon
 							icon={faHome}
@@ -29,7 +29,7 @@ class OwnerAppFooter extends PureComponent {
 					</button>
 				</Link>
 
-				<Link to="/Chart">
+				<Link to="/App/Chart">
 					<button>
 						<FontAwesomeIcon
 							icon={faChartPie}
@@ -40,7 +40,7 @@ class OwnerAppFooter extends PureComponent {
 						분석 차트
 					</button>
 				</Link>
-				<Link to="/MyStore">
+				<Link to="/App/MyStore">
 					<button>
 						<FontAwesomeIcon
 							icon={faStore}

@@ -1,12 +1,21 @@
 .App {
 	position: absolute;
-	left: 33%;
+	z-index: 100;
 	text-align: center;
+	left: 30%;
 	min-width: 34%;
 	max-width: 34%;
 	right: 33%;
-	background-color: white;
+	background-color: rgb(255, 255, 255);
 	height: 720px;
+	border-left: 40px solid brown;
+	border-right: 10px solid rgb(252, 252, 239);
+
+	-webkit-transform: rotateY(-10deg) translateZ(10px);
+	-moz-transform: rotateY(-10deg) translateZ(10px);
+	transform: rotateY(-10deg) translateZ(10px);
+	border-image-slice: 1;
+	box-shadow: 10px 40px 10px 10px gray;
 }
 
 .App-logo {

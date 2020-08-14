@@ -44,7 +44,9 @@
 }
 
 .Line ol {
+	left: -200px;
 	height: 200px;
+	width: 100%;
 	max-height: 200px;
 	overflow-x: hidden;
 	overflow-y: scroll;

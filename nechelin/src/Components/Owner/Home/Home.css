@@ -1,5 +1,6 @@
 .Home {
 	max-height: 570px;
+	overflow: hidden;
 }
 .Home li {
 	background-color: #ffffe6;

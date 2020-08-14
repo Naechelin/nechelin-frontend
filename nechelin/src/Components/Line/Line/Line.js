@@ -20,10 +20,10 @@ class Line extends PureComponent {
 					<br />
 				</div>
 				<br />
-				<Link to="/Line/LineVisit">
+				<Link to="/App/Line/LineVisit">
 					<span className="LinkTab">이번주 방문한 매장</span>
 				</Link>
-				<Link to="/Line/LineHistory">
+				<Link to="/App/Line/LineHistory">
 					<span className="LinkTab">라인내역</span>
 				</Link>
 				<hr />

@@ -8,13 +8,13 @@ class CouponShow extends PureComponent {
 		return (
 			<div className="CouponShow">
 				<Switch>
-					<Route exact path="/Coupon">
+					<Route exact path="/App/Coupon">
 						<CouponAvailable />
 					</Route>
-					<Route path="/Coupon/CouponAvailable">
+					<Route path="/App/Coupon/CouponAvailable">
 						<CouponAvailable />
 					</Route>
-					<Route path="/Coupon/CouponHistory">
+					<Route path="/App/Coupon/CouponHistory">
 						<CouponHistory />
 					</Route>
 				</Switch>

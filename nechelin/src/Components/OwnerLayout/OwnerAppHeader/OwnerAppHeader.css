@@ -1,8 +1,10 @@
 .OwnerAppHeader {
-	position: relative;
+	position: absolute;
 	background-color: #ffc0c0;
 	height: 5em;
-	z-index: 0;
+	width: 100%;
+	border-left: 1px solid rgb(111, 10, 10);
+	border-right: 1px solid rgb(228, 224, 224);
 }
 .OwnerAppHeader #faBars {
 	float: left;
@@ -10,11 +12,15 @@
 	margin-left: 2%;
 }
 .OwnerAppHeader #logo {
-	margin-left: 4%;
+	margin-left: 35%;
 }
 .OwnerAppHeader #QRcode {
 	float: right;
 	z-index: 10px;
+}
+.OwnerAppHeader #bookMark {
+	float: left;
+	margin-left: 100px;
 }
 .OwnerAppHeader #faBell {
 	float: right;

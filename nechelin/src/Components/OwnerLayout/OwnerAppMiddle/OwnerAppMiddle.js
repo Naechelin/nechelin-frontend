@@ -14,19 +14,22 @@ class OwnerAppMiddle extends PureComponent {
 					<Route exact path="/">
 						<Home />
 					</Route>
-					<Route path="/Home">
+					<Route exact path="/App">
 						<Home />
 					</Route>
-					<Route path="/Chart">
+					<Route path="/App/Home">
+						<Home />
+					</Route>
+					<Route path="/App/Chart">
 						<Chart />
 					</Route>
-					<Route path="/MyStore">
+					<Route path="/App/MyStore">
 						<MyStore />
 					</Route>
-					<Route path="/QRcodeScanner">
+					<Route path="/App/QRcodeScanner">
 						<QRcodeScanner />
 					</Route>
-					<Route path="/StampByPhoneNumber">
+					<Route path="/App/StampByPhoneNumber">
 						<StampByPhoneNumber />
 					</Route>
 				</Switch>

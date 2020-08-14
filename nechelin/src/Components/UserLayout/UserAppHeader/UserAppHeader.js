@@ -1,7 +1,7 @@
 import React, {PureComponent} from "react";
 import "./UserAppHeader.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBars, faBell} from "@fortawesome/free-solid-svg-icons";
+import {faBars, faBookmark, faBell} from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
 
 class UserAppHeader extends PureComponent {
@@ -21,7 +21,7 @@ class UserAppHeader extends PureComponent {
 					color="#FF9AA2"
 					onClick={this.openMenu}
 				/>
-				<Link to="/Line">
+				<Link to="/App/Line">
 					<img
 						src="/images/Logo.png"
 						alt="Logo"
@@ -30,6 +30,12 @@ class UserAppHeader extends PureComponent {
 					></img>
 				</Link>
 
+				<FontAwesomeIcon
+					id="bookMark"
+					icon={faBookmark}
+					size="2x"
+					color="brown"
+				/>
 				<FontAwesomeIcon
 					icon={faBell}
 					id="faBell"
