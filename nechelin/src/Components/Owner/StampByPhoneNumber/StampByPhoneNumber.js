@@ -42,7 +42,7 @@ class StampByPhoneNumber extends PureComponent {
 			window.$("#confirm").click(function () {
 				if (window.$("input").attr("value").length === 11) {
 					alert("적립이 완료되었습니다");
-					window.location.assign("/QRcodeScanner");
+					window.location.assign("/App/QRcodeScanner");
 				} else {
 					alert("잘못된 번호입니다");
 					window.location.reload();

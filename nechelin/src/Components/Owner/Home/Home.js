@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import "./Home.css";
 import {Link} from "react-router-dom";
+import HomeComponent from "./HomeComponent";
 
 class Home extends Component {
 	render() {
@@ -9,22 +10,14 @@ class Home extends Component {
 				<ul>
 					<Link to="/App/QRcodeScanner?storeNum=1">
 						<li>
-							<img
-								src="/images/background.png"
-								alt="매장사진"
-							></img>
-							<label>내매장1</label>
-							<label>QR코드 스캐너</label>
+							<HomeComponent />
 						</li>
 					</Link>
 					<Link to="/App/QRcodeScanner?storeNum=2">
 						<li>
-							<img
-								src="/images/background.png"
-								alt="매장사진"
-							></img>
-							<label>내매장2</label>
-							<label>QR코드 스캐너</label>
+							<li>
+								<HomeComponent />
+							</li>
 						</li>
 					</Link>
 					<li>

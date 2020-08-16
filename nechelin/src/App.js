@@ -10,7 +10,7 @@ import "./App.css";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 function App() {
-	let member_type = "customer";
+	let member_type = "owner";
 	if (member_type === "customer")
 		return (
 			<div>

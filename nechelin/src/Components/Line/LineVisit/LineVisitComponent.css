@@ -8,12 +8,17 @@
 	border-radius: 5px;
 	text-align: left;
 }
+
 .LineVisitComponent img {
 	float: left;
 	width: 103px;
 	height: 95px;
 	margin-left: 10px;
 	border-radius: 5px;
+}
+.LineVisitComponent #foodStyle {
+	font-size: 12px;
+	margin-left: 15px;
 }
 .LineVisitComponent #storeInfo {
 	color: rgb(10, 10, 10);
