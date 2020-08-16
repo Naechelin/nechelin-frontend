@@ -1,13 +1,31 @@
 .LineVisitComponent {
-	height: 50px;
-	min-width: 100px;
-	margin: 10px;
+	height: 120px;
+	min-width: 100%;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding-top: 15px;
+	background-color: #f3ede7;
+	border-radius: 5px;
+	text-align: left;
 }
-.LineVisitComponent span {
-	background-color: #ffffe6;
-	height: 20px;
-	min-width: 45%;
-	font-size: small;
+.LineVisitComponent img {
+	float: left;
+	width: 103px;
+	height: 95px;
+	margin-left: 10px;
+	border-radius: 5px;
+}
+.LineVisitComponent #storeInfo {
+	float: left;
+	margin-left: 50px;
+	font-size: 15px;
+}
+
+.LineVisitComponent #goToReview {
+	position: relative;
+	float: right;
+	margin-right: 10px;
+	margin-top: 70px;
 }
 
 .LineVisitComponent a {

@@ -11,7 +11,12 @@ class Line extends PureComponent {
 				<SearchBar />
 				<br />
 				<br />
-				<div className="LineQuest"></div>
+				<img
+					src="/images/stampPaper.png"
+					alt="stampPaper"
+					id="stampPaper"
+				/>
+				<img src="/images/flag.png" alt="flag" id="flag" />
 				<br />
 				<div className="LineCurrent">
 					나의 달성 현황 : 2회
@@ -26,7 +31,6 @@ class Line extends PureComponent {
 				<Link to="/App/Line/LineHistory">
 					<span className="LinkTab">라인내역</span>
 				</Link>
-				<hr />
 				<br />
 				<div className="LineShow">
 					<LineShow />

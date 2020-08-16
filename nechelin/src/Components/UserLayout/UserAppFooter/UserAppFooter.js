@@ -10,24 +10,15 @@ import {
 import {Link} from "react-router-dom";
 
 class UserAppFooter extends PureComponent {
-	constructor(props) {
-		super(props);
-		this.state = {
-			num: 1,
-			choose: 1,
-		};
-	}
-	changeMenu(choose) {}
 	render() {
 		return (
 			<div className="UserAppFooter">
 				<Link to="/App/Line">
-					<button>
+					<button className="btns">
 						<FontAwesomeIcon
 							icon={faFlag}
 							size="2x"
 							color="white"
-							onClick={this.changeMenu(1)}
 						/>
 						<br />
 						라인
@@ -35,7 +26,7 @@ class UserAppFooter extends PureComponent {
 				</Link>
 
 				<Link to="/App/Map">
-					<button>
+					<button className="btns">
 						<FontAwesomeIcon
 							icon={faMapMarkedAlt}
 							size="2x"
@@ -46,7 +37,7 @@ class UserAppFooter extends PureComponent {
 					</button>
 				</Link>
 				<Link to="/App/Coupon">
-					<button>
+					<button className="btns">
 						<FontAwesomeIcon
 							icon={faGift}
 							size="2x"

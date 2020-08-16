@@ -1,4 +1,4 @@
-.CouponPaper {
+.CouponComponent {
 	max-width: 90%;
 	min-height: 150px;
 	max-height: 200px;
@@ -7,15 +7,15 @@
 	padding: 10px;
 }
 
-.CouponPaper li {
+.CouponComponent li {
 	color: gray;
 }
-.CouponPaper .CouponPaperContent {
+.CouponComponent .CouponComponentStore {
 	float: left;
 	margin-left: 0px;
 	width: 60%;
 }
-.CouponPaper .CouponPaperImage {
+.CouponComponent .CouponComponentImage {
 	float: right;
 	margin-right: 0px;
 	width: 40%;

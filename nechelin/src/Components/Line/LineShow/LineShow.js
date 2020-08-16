@@ -1,5 +1,4 @@
 import React, {PureComponent} from "react";
-import "./LineShow.css";
 import LineVisit from "../LineVisit/LineVisit";
 import LineHistory from "../LineHistory/LineHistory";
 import {Switch, Route} from "react-router-dom";

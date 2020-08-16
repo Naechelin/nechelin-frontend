@@ -10,6 +10,7 @@
 	margin-top: 35px;
 	height: 550px;
 }
+
 .App {
 	position: absolute;
 	z-index: 100;
@@ -21,7 +22,7 @@
 	background-color: rgb(255, 255, 255);
 	height: 720px;
 	border-left: 40px solid brown;
-	border-right: 10px solid rgb(252, 252, 239);
+	border-right: 10px solid rgb(252, 252, 230);
 
 	-webkit-transform: rotateY(-10deg) translateZ(10px);
 	-moz-transform: rotateY(-10deg) translateZ(10px);

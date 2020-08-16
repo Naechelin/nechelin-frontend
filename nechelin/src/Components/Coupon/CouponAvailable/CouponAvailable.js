@@ -1,5 +1,6 @@
 import React, {PureComponent} from "react";
-import CouponPaper from "../CouponPaper/CouponPaper";
+import "./CouponAvailable.css";
+import CouponComponent from "../CouponComponent/CouponComponent";
 
 class CouponAvailable extends PureComponent {
 	render() {
@@ -7,40 +8,40 @@ class CouponAvailable extends PureComponent {
 			<div className="CouponAvailable">
 				<ol>
 					<li>
-						<CouponPaper />
+						<CouponComponent />
 					</li>
 					<li>
-						<CouponPaper />
+						<CouponComponent />
 					</li>
 					<li>
-						<CouponPaper />
+						<CouponComponent />
 					</li>
 					<li>
-						<CouponPaper />
+						<CouponComponent />
 					</li>
 					<li>
-						<CouponPaper />
+						<CouponComponent />
 					</li>
 					<li>
-						<CouponPaper />
+						<CouponComponent />
 					</li>
 					<li>
-						<CouponPaper />
+						<CouponComponent />
 					</li>
 					<li>
-						<CouponPaper />
+						<CouponComponent />
 					</li>
 					<li>
-						<CouponPaper />
+						<CouponComponent />
 					</li>
 					<li>
-						<CouponPaper />
+						<CouponComponent />
 					</li>
 					<li>
-						<CouponPaper />
+						<CouponComponent />
 					</li>
 					<li>
-						<CouponPaper />
+						<CouponComponent />
 					</li>
 				</ol>
 			</div>
