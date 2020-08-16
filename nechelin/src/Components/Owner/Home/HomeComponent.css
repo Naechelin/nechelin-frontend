@@ -1,0 +1,42 @@
+.HomeComponent {
+	height: 120px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding-top: 15px;
+	background-color: #f3ede7;
+	border-radius: 5px;
+	text-align: left;
+}
+.HomeComponent #foodStyle {
+	font-size: 12px;
+	margin-left: 15px;
+}
+.HomeComponent img {
+	float: left;
+	width: 103px;
+	height: 95px;
+	margin-left: 10px;
+	border-radius: 5px;
+}
+.HomeComponent #HomeInfo {
+	float: left;
+	margin-left: 50px;
+	margin-top: 10px;
+	font-size: 15px;
+}
+
+.HomeComponent .HomeToScanner {
+	font-size: 18px;
+	position: relative;
+	float: right;
+	margin-right: 20px;
+	margin-top: 10px;
+}
+
+.HomeComponent #QRcodeScanner {
+	float: right;
+	width: 58px;
+	height: 50px;
+	margin-right: 50px;
+	margin-top: 10px;
+}

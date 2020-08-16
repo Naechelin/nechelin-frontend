@@ -3,12 +3,12 @@
 	overflow: hidden;
 }
 .Home li {
-	background-color: #ffffe6;
-	padding: 10px;
-	margin-bottom: 20px;
 	list-style: none;
-	min-height: 100px;
-	max-width: 90%;
+	width: 100%;
+	background-color: #f3ede7;
+	height: 120px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .Home img {
@@ -28,4 +28,5 @@
 
 .Home h1 {
 	text-align: center;
+	padding-top: 40px;
 }

@@ -10,7 +10,7 @@ class LineVisitComponent extends Component {
 				<Link to="/App/Store?매장명">
 					<img src="/images/background.png" alt="사진" />
 					<label id="storeInfo">
-						왕돈까스 중식
+						매장명 <text id="foodStyle">중식</text>
 						<br />
 						<FontAwesomeIcon icon={faStar} color="#FFFFF6" />
 						<FontAwesomeIcon icon={faStar} color="#FFFFF6" />
