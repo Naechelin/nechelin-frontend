@@ -30,16 +30,18 @@ class AppIntro extends Component {
 								height="100%"
 							/>
 						</li>
-						<li> </li>
+						<li></li>
 						<li></li>
 						<li></li>
 					</ul>
 					<ul className="page">
 						<li></li>
 						<li>
-							<label id="content">나의 맛집내슐랭</label>
+							<img src="/images/frontPage.jpg" alt="frontPage" />
 						</li>
-						<li></li>
+						<li>
+							<img />
+						</li>
 						<li></li>
 						<li></li>
 						<li></li>
