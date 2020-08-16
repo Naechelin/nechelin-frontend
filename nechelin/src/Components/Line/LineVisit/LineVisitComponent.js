@@ -9,18 +9,18 @@ class LineVisitComponent extends Component {
 			<div className="LineVisitComponent">
 				<Link to="/App/Store?매장명">
 					<img src="/images/background.png" alt="사진" />
+					<label id="storeInfo">
+						왕돈까스 중식
+						<br />
+						<FontAwesomeIcon icon={faStar} color="#FFFFF6" />
+						<FontAwesomeIcon icon={faStar} color="#FFFFF6" />
+						<FontAwesomeIcon icon={faStar} color="#FFFFF6" />
+						<FontAwesomeIcon icon={faStar} color="#FFFFF6" />
+						<br />
+						<br />
+					</label>
+					<label id="goToReview">.....리뷰 쓰러가기</label>
 				</Link>
-				<label id="storeInfo">
-					왕돈까스 중식
-					<br />
-					<FontAwesomeIcon icon={faStar} color="#FFFFF6" />
-					<FontAwesomeIcon icon={faStar} color="#FFFFF6" />
-					<FontAwesomeIcon icon={faStar} color="#FFFFF6" />
-					<FontAwesomeIcon icon={faStar} color="#FFFFF6" />
-					<br />
-					<br />
-				</label>
-				<label id="goToReview">.....리뷰 쓰러가기</label>
 			</div>
 		);
 	}
