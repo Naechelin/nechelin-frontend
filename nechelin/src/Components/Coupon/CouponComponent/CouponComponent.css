@@ -1,22 +1,49 @@
 .CouponComponent {
-	max-width: 90%;
-	min-height: 150px;
-	max-height: 200px;
+	max-width: 95%;
+	min-height: 170px;
+	max-height: 240px;
 	overflow: hidden;
-	border: 1px solid rgb(189, 185, 185);
 	padding: 10px;
+	margin-left: -20px;
 }
-
+.CouponComponent ol {
+	max-height: 70px;
+}
 .CouponComponent li {
 	color: gray;
+	margin-left: -50px;
+}
+.CouponComponent #QRcode {
+	float: right;
+	margin-top: -55px;
+	width: 50px;
+	height: 50px;
 }
 .CouponComponent .CouponComponentStore {
 	float: left;
 	margin-left: 0px;
 	width: 60%;
 }
-.CouponComponent .CouponComponentImage {
+
+.CouponComponent #couponBackground {
+	float: left;
+	width: 100px;
+	height: 130px;
+	margin-left: 40px;
+	margin-right: 30px;
+	margin-top: 10px;
+}
+
+.CouponComponent #clickHere {
 	float: right;
-	margin-right: 0px;
-	width: 40%;
+	width: 100px;
+	margin-top: -80px;
+	margin-right: -20px;
+}
+
+.CouponComponent #clickHereLabel {
+	float: right;
+	color: rgb(0, 0, 120);
+	margin-left: 100px;
+	margin-top: -90px;
 }

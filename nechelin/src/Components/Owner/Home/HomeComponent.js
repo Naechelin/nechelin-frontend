@@ -14,7 +14,7 @@ class HomeComponent extends Component {
 				/>
 				<div id="HomeInfo">
 					<img
-						src="/images/restaurant3.png"
+						src="/images/restaurant2.png"
 						alt="사진"
 						id="picture"
 					/>
