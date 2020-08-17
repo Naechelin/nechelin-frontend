@@ -13,7 +13,11 @@ class HomeComponent extends Component {
 					id="storeBackground"
 				/>
 				<div id="HomeInfo">
-					<img src="/images/dummyLine2.png" alt="사진" id="picture" />
+					<img
+						src="/images/restaurant3.png"
+						alt="사진"
+						id="picture"
+					/>
 					<br />
 					<div id="StoreInfo">
 						매장명 <text id="foodStyle">중식</text>

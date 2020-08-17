@@ -14,7 +14,6 @@ class Coupon extends PureComponent {
 					<span className="CouponTab">사용 내역</span>
 				</Link>
 				<br />
-
 				<div className="CouponShow">
 					<CouponShow />
 				</div>
