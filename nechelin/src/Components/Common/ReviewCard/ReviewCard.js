@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import "./ReviewCard.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faStar, faArrowUp} from "@fortawesome/free-solid-svg-icons";
+import {faStar} from "@fortawesome/free-solid-svg-icons";
 class ReviewCard extends Component {
 	render() {
 		return (

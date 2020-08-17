@@ -31,7 +31,7 @@ class HomeComponent extends Component {
 						<text id="toQRcode">QR코드 바로가기</text>
 						<br />
 						<img
-							src="/images/toQRcodeArrow.png"
+							src="/images/arrow.png"
 							alt="toQRcodeArrow"
 							id="toQRcodeArrow"
 						/>

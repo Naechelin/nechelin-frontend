@@ -37,6 +37,24 @@
 	height: 40px;
 	width: 75%;
 }
+
+.Line #LineEdit {
+	position: absolute;
+	z-index: 1000;
+	top: 230px;
+	right: 90px;
+	color: rgb(54, 54, 54);
+	border-radius: 100px;
+	width: 90px;
+	height: 30px;
+	border: 1px solid rgb(214, 214, 214);
+	float: right;
+	padding: 5px;
+	font-size: 12px;
+
+	background-color: #ffffd6;
+	box-shadow: 1px 1px 2px gray;
+}
 .Line span {
 	float: left;
 	border: 1px solid rgb(189, 185, 185);
