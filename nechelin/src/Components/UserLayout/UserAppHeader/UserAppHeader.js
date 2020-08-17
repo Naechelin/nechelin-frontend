@@ -3,10 +3,24 @@ import "./UserAppHeader.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars, faBookmark} from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
+import jQuery from "jquery";
+window.$ = window.jQuery = jQuery;
 
 class UserAppHeader extends PureComponent {
-	openMenu() {
-		alert("메뉴바");
+	componentDidMount() {
+		window.$(document).ready(function () {
+			let menuStatus = false;
+			window.$("#faBars").click(function () {
+				menuStatus = !menuStatus;
+				if (menuStatus === true) {
+					alert("menuOpen");
+					window.$(".Menu").css("visibility", "visible");
+				} else {
+					alert("menuClose");
+					window.$(".Menu").css("visibility", "hidden");
+				}
+			});
+		});
 	}
 	openAlarm() {
 		alert("알림 설정");
@@ -19,7 +33,6 @@ class UserAppHeader extends PureComponent {
 					id="faBars"
 					size="2x"
 					color="#FF9AA2"
-					onClick={this.openMenu}
 				/>
 				<Link to="/App/Line">
 					<img

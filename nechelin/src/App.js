@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import UserAppHeader from "./Components/UserLayout/UserAppHeader/UserAppHeader";
 import UserAppMiddle from "./Components/UserLayout/UserAppMiddle/UserAppMiddle";
 import UserAppFooter from "./Components/UserLayout/UserAppFooter/UserAppFooter";
@@ -8,6 +8,8 @@ import OwnerAppMiddle from "./Components/OwnerLayout/OwnerAppMiddle/OwnerAppMidd
 import OwnerAppFooter from "./Components/OwnerLayout/OwnerAppFooter/OwnerAppFooter";
 import "./App.css";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import jQuery from "jquery";
+window.$ = window.jQuery = jQuery;
 
 function App() {
 	let member_type = "customer";
