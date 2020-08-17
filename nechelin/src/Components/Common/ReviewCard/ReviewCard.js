@@ -1,39 +1,28 @@
 import React, {Component} from "react";
 import "./ReviewCard.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faUser, faStar} from "@fortawesome/free-solid-svg-icons";
+import {faStar, faArrowUp} from "@fortawesome/free-solid-svg-icons";
 class ReviewCard extends Component {
 	render() {
 		return (
 			<div className="ReviewCard">
+				<img src="/images/restaurant3.png" alt="첨부사진"></img>
 				<div className="ReviewCardScore">
+					<FontAwesomeIcon icon={faStar} color="yellow" />
+					<FontAwesomeIcon icon={faStar} color="yellow" />
+					<FontAwesomeIcon icon={faStar} color="yellow" />
+					<FontAwesomeIcon icon={faStar} color="yellow" />
+					<FontAwesomeIcon icon={faStar} color="yellow" />
 					<FontAwesomeIcon icon={faStar} color="red" />
 					<FontAwesomeIcon icon={faStar} color="red" />
-					<FontAwesomeIcon icon={faStar} color="red" />
-					<br />
-					<label>4.8</label> <br />
-					<FontAwesomeIcon icon={faStar} color="yellow" />
-					<FontAwesomeIcon icon={faStar} color="yellow" />
-					<FontAwesomeIcon icon={faStar} color="yellow" />
-					<FontAwesomeIcon icon={faStar} color="yellow" />
-					<FontAwesomeIcon icon={faStar} color="yellow" />
+					<FontAwesomeIcon icon={faStar} color="red" /> 4.8
 				</div>
-				<div>
-					<FontAwesomeIcon
-						id="profile"
-						icon={faUser}
-						size="4xl"
-						color="gray"
-					/>
-					<textarea readOnly>
-						sdfsdfsdfsdfsdfsdfsdfsdfsdfadsfasdfa
-					</textarea>
-					<img src="images/storePhoto.png" alt="첨부사진"></img>
-					<br />
-				</div>
-				<div>
-					<label>리뷰자명</label>
-				</div>
+				<br />
+				<text id="writter">tlfzgjadyd</text>
+				<br />
+				<div className="profileDiv"></div>
+				<div className="text">맛있었다 </div>
+				<br />
 			</div>
 		);
 	}
