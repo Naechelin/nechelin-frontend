@@ -1,32 +1,18 @@
 .Home {
 	max-height: 570px;
-	overflow: hidden;
-}
-.Home li {
-	list-style: none;
-	width: 100%;
-	background-color: #f3ede7;
-	height: 120px;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
 }
 
-.Home img {
-	float: left;
-	margin-left: 10px;
-	width: 100px;
-	height: 100px;
-	border-radius: 10px;
+.Home #knife {
+	position: absolute;
+	width: 35px;
+	top: 275px;
+	left: 220px;
 }
 
-.Home label {
-	float: left;
-	margin-left: 40px;
-	margin-top: 30px;
-	font-size: 20px;
-}
-
-.Home h1 {
-	text-align: center;
-	padding-top: 40px;
+.Home::-webkit-scrollbar {
+	display: none;
 }

@@ -7,24 +7,33 @@ class Home extends Component {
 	render() {
 		return (
 			<div className="Home">
+				<img src="/images/knife.png" alt="knife" id="knife" />
 				<ul>
-					<Link to="/App/QRcodeScanner?storeNum=1">
-						<li>
-							<HomeComponent />
-						</li>
-					</Link>
-					<Link to="/App/QRcodeScanner?storeNum=2">
-						<li>
-							<li>
-								<HomeComponent />
-							</li>
-						</li>
-					</Link>
 					<li>
-						<h1>+</h1>
+						<Link to="/App/QRcodeScanner?storeNum=1">
+							<HomeComponent className="left" />
+						</Link>
+						<vr />
+						<Link to="/App/QRcodeScanner?storeNum=2">
+							<HomeComponent className="right" />
+						</Link>
+					</li>
+
+					<li>
+						<Link to="/App/QRcodeScanner?storeNum=1">
+							<HomeComponent className="left" />
+						</Link>
+						<Link to="/App/QRcodeScanner?storeNum=2">
+							<HomeComponent className="right" />
+						</Link>
 					</li>
 					<li>
-						<h1>+</h1>
+						<Link to="/App/QRcodeScanner?storeNum=1">
+							<HomeComponent />
+						</Link>
+						<Link to="/App/QRcodeScanner?storeNum=2">
+							<HomeComponent />
+						</Link>
 					</li>
 				</ul>
 			</div>
