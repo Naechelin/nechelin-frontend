@@ -11,8 +11,158 @@ import {
 	faArrowUp,
 } from "@fortawesome/free-solid-svg-icons";
 import ReviewCard from "../ReviewCard/ReviewCard";
+import jQuery from "jquery";
+window.$ = window.jQuery = jQuery;
 
 class Store extends Component {
+	componentDidMount() {
+		window.$(document).ready(function () {
+			var score = 0;
+			window.$("#addReview").click(function () {
+				window.$(".popUpBackground").css("visibility", "visible");
+				window.$(".popUp").css("visibility", "visible");
+			});
+			window.$("#quit").click(function () {
+				let select = window.confirm("작성을 그만두시겠습니까?");
+				if (select === true) {
+					document.getElementById("txtArea").value = "";
+					score = 0;
+
+					window.$(".reviewStars").css("color", "rgb(218, 237, 253)");
+					window.$("#star6").css("visibility", "hidden");
+					window.$("#star7").css("visibility", "hidden");
+					window.$("#star8").css("visibility", "hidden");
+
+					window.$(".popUpBackground").css("visibility", "hidden");
+					window.$(".popUp").css("visibility", "hidden");
+				}
+			});
+			window.$("#cancel").click(function () {
+				let select = window.confirm("작성을 그만두시겠습니까?");
+				if (select === true) {
+					document.getElementById("txtArea").value = "";
+					score = 0;
+
+					window.$(".reviewStars").css("color", "rgb(218, 237, 253)");
+					window.$("#star6").css("visibility", "hidden");
+					window.$("#star7").css("visibility", "hidden");
+					window.$("#star8").css("visibility", "hidden");
+
+					window.$(".popUpBackground").css("visibility", "hidden");
+					window.$(".popUp").css("visibility", "hidden");
+				}
+			});
+			window.$("#confirm").click(function () {
+				if (score !== 0) {
+					if (document.getElementById("txtArea").value.length !== 0) {
+						alert("리뷰가 등록되었습니다");
+						/*리뷰 전송 ajax 여기다 쓰면됨*/
+						document.getElementById("txtArea").value = "";
+						score = 0;
+
+						window
+							.$(".reviewStars")
+							.css("color", "rgb(218, 237, 253)");
+						window.$("#star6").css("visibility", "hidden");
+						window.$("#star7").css("visibility", "hidden");
+						window.$("#star8").css("visibility", "hidden");
+
+						window
+							.$(".popUpBackground")
+							.css("visibility", "hidden");
+						window.$(".popUp").css("visibility", "hidden");
+					} else {
+						alert("내용을 입력해주세요");
+					}
+				} else {
+					alert("평점을 입력해주세요");
+				}
+			});
+
+			window.$("#star1").click(function () {
+				score = 1;
+				window.$(".reviewStars").css("color", "rgb(218, 237, 253)");
+				window.$("#star1").css("color", "#ffff66");
+
+				window.$("#star6").css("visibility", "hidden");
+				window.$("#star7").css("visibility", "hidden");
+				window.$("#star8").css("visibility", "hidden");
+			});
+			window.$("#star2").click(function () {
+				score = 2;
+				window.$(".reviewStars").css("color", "rgb(218, 237, 253)");
+				window.$("#star1").css("color", "#ffff66");
+				window.$("#star2").css("color", "#ffff66");
+
+				window.$("#star6").css("visibility", "hidden");
+				window.$("#star7").css("visibility", "hidden");
+				window.$("#star8").css("visibility", "hidden");
+			});
+			window.$("#star3").click(function () {
+				score = 3;
+				window.$(".reviewStars").css("color", "rgb(218, 237, 253)");
+				window.$("#star1").css("color", "#ffff66");
+				window.$("#star2").css("color", "#ffff66");
+				window.$("#star3").css("color", "#ffff66");
+
+				window.$("#star6").css("visibility", "hidden");
+				window.$("#star7").css("visibility", "hidden");
+				window.$("#star8").css("visibility", "hidden");
+			});
+			window.$("#star4").click(function () {
+				score = 4;
+				window.$(".reviewStars").css("color", "rgb(218, 237, 253)");
+				window.$("#star1").css("color", "#ffff66");
+				window.$("#star2").css("color", "#ffff66");
+				window.$("#star3").css("color", "#ffff66");
+				window.$("#star4").css("color", "#ffff66");
+
+				window.$("#star6").css("visibility", "hidden");
+				window.$("#star7").css("visibility", "hidden");
+				window.$("#star8").css("visibility", "hidden");
+			});
+			window.$("#star5").click(function () {
+				score = 5;
+				window.$(".reviewStars").css("color", "rgb(218, 237, 253)");
+				window.$("#star1").css("color", "#ffff66");
+				window.$("#star2").css("color", "#ffff66");
+				window.$("#star3").css("color", "#ffff66");
+				window.$("#star4").css("color", "#ffff66");
+				window.$("#star5").css("color", "#ffff66");
+
+				window.$("#star6").css("visibility", "visible");
+				window.$("#star7").css("visibility", "visible");
+				window.$("#star8").css("visibility", "visible");
+			});
+			window.$("#star6").click(function () {
+				score = 6;
+				window.$("#star6").css("color", "rgb(218, 237, 253)");
+				window.$("#star7").css("color", "rgb(218, 237, 253)");
+				window.$("#star8").css("color", "rgb(218, 237, 253)");
+
+				window.$("#star6").css("color", "red");
+			});
+			window.$("#star7").click(function () {
+				score = 7;
+				window.$("#star6").css("color", "rgb(218, 237, 253)");
+				window.$("#star7").css("color", "rgb(218, 237, 253)");
+				window.$("#star8").css("color", "rgb(218, 237, 253)");
+
+				window.$("#star6").css("color", "red");
+				window.$("#star7").css("color", "red");
+			});
+			window.$("#star8").click(function () {
+				score = 8;
+				window.$("#star6").css("color", "rgb(218, 237, 253)");
+				window.$("#star7").css("color", "rgb(218, 237, 253)");
+				window.$("#star8").css("color", "rgb(218, 237, 253)");
+
+				window.$("#star6").css("color", "red");
+				window.$("#star7").css("color", "red");
+				window.$("#star8").css("color", "red");
+			});
+		});
+	}
 	render() {
 		return (
 			<div className="Store">
@@ -80,11 +230,98 @@ class Store extends Component {
 							</li>
 						</ul>
 					</div>
+
 					<div className="text">
 						최근 리뷰 n개
-						<button onClick="">리뷰 쓰기</button>
+						<button id="addReview">리뷰 쓰기</button>
 					</div>
-
+					<div className="popUpBackground" />
+					<div className="popUp">
+						<text id="reviewTitle">리뷰쓰기</text>
+						<text id="quit"> X </text>
+						<hr />
+						<img
+							src="/images/restaurant1.png"
+							alt="restaurant1.png"
+							id="reviewImage"
+						/>
+						<div id="reviewStoreInfo">
+							<h4>상호명</h4>
+							<br />
+							<label>마라탕1 짜장면2 짬뽕1</label>
+						</div>
+						<hr />
+						<label>
+							<text id="reviewStarsLabel">평점:</text>
+							<FontAwesomeIcon
+								icon={faStar}
+								color="rgb(218, 237, 253)"
+								className="reviewStars"
+								id="star1"
+							/>
+							<FontAwesomeIcon
+								icon={faStar}
+								color="rgb(218, 237, 253)"
+								className="reviewStars"
+								id="star2"
+							/>
+							<FontAwesomeIcon
+								icon={faStar}
+								color="rgb(218, 237, 253)"
+								className="reviewStars"
+								id="star3"
+							/>
+							<FontAwesomeIcon
+								icon={faStar}
+								color="rgb(218, 237, 253)"
+								className="reviewStars"
+								id="star4"
+							/>
+							<FontAwesomeIcon
+								icon={faStar}
+								color="rgb(218, 237, 253)"
+								className="reviewStars"
+								id="star5"
+							/>
+							<FontAwesomeIcon
+								icon={faStar}
+								color="red"
+								className="reviewStars"
+								visibility="hidden"
+								id="star6"
+							/>
+							<FontAwesomeIcon
+								icon={faStar}
+								color="red"
+								className="reviewStars"
+								visibility="hidden"
+								id="star7"
+							/>
+							<FontAwesomeIcon
+								icon={faStar}
+								color="red"
+								className="reviewStars"
+								visibility="hidden"
+								id="star8"
+							/>
+						</label>
+						<hr />
+						<br />
+						<div id="writeArea">
+							<text id="writePlease">장단점을 적어주세요!</text>
+							<br />
+							<textarea
+								id="txtArea"
+								required
+								placeholder="리뷰 내용을 입력해주세요"
+							></textarea>
+						</div>
+						<hr />
+						<button id="cancel">취소</button>
+						<button type="submit" id="confirm">
+							등록
+						</button>
+					</div>
 					<ol>
 						<li>
 							<ReviewCard />

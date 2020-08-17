@@ -1,7 +1,7 @@
 import React, {PureComponent} from "react";
 import "./UserAppHeader.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBars, faBookmark, faBell} from "@fortawesome/free-solid-svg-icons";
+import {faBars, faBookmark} from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
 
 class UserAppHeader extends PureComponent {
