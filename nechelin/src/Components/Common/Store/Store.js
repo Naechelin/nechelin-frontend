@@ -22,6 +22,30 @@ class Store extends PureComponent {
 				window.$(".popUpBackground").css("visibility", "visible");
 				window.$(".popUp").css("visibility", "visible");
 			});
+			window.$(document).keydown(function (event) {
+				if (event.keyCode === 27 || event.which === 27) {
+					let select = window.confirm("작성을 그만두시겠습니까?");
+
+					if (select === true) {
+						document.getElementById("txtArea").value = "";
+						score = 0;
+						window.$(".upload-name").val("");
+						window.$("#file").val();
+
+						window
+							.$(".reviewStars")
+							.css("color", "rgb(218, 237, 253)");
+						window.$("#star6").css("visibility", "hidden");
+						window.$("#star7").css("visibility", "hidden");
+						window.$("#star8").css("visibility", "hidden");
+
+						window
+							.$(".popUpBackground")
+							.css("visibility", "hidden");
+						window.$(".popUp").css("visibility", "hidden");
+					}
+				}
+			});
 			window.$("#quit").click(function () {
 				let select = window.confirm("작성을 그만두시겠습니까?");
 				if (select === true) {
