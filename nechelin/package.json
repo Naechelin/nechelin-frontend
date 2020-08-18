@@ -27,7 +27,6 @@
 	"eslintConfig": {
 		"extends": "react-app"
 	},
-	"proxy": "http://www.nechelin.cf:3000",
 	"browserslist": {
 		"production": [
 			">0.2%",
