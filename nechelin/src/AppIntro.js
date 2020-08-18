@@ -11,8 +11,6 @@ window.$ = window.jQuery = jQuery;
 class AppIntro extends PureComponent {
 	componentDidMount() {
 		window.$(document).ready(function () {
-			alert("width:" + window.innerWidth);
-			alert("height: " + window.innerHeight);
 			window.$(".book").click(function () {
 				window.location.assign("/App");
 			});
