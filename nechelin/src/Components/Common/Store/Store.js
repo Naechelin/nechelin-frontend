@@ -29,7 +29,7 @@ class Store extends PureComponent {
 					if (select === true) {
 						document.getElementById("txtArea").value = "";
 						score = 0;
-						window.$(".upload-name").val("");
+						window.$(".upload-name").val("파일을 선택해주세요");
 						window.$("#file").val();
 
 						window
@@ -51,7 +51,7 @@ class Store extends PureComponent {
 				if (select === true) {
 					document.getElementById("txtArea").value = "";
 					score = 0;
-					window.$(".upload-name").val("");
+					window.$(".upload-name").val("파일을 선택해주세요");
 					window.$("#file").val();
 
 					window.$(".reviewStars").css("color", "rgb(218, 237, 253)");
@@ -68,7 +68,7 @@ class Store extends PureComponent {
 				if (select === true) {
 					document.getElementById("txtArea").value = "";
 					score = 0;
-					window.$(".upload-name").val("");
+					window.$(".upload-name").val("파일을 선택해주세요");
 					window.$("#file").val();
 
 					window.$(".reviewStars").css("color", "rgb(218, 237, 253)");
@@ -87,7 +87,7 @@ class Store extends PureComponent {
 						/*리뷰 전송 ajax 여기다 쓰면됨*/
 						document.getElementById("txtArea").value = "";
 						score = 0;
-						window.$(".upload-name").val("");
+						window.$(".upload-name").val("파일을 선택해주세요");
 						window.$("#file").val();
 
 						window
