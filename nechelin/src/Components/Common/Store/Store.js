@@ -27,6 +27,8 @@ class Store extends Component {
 				if (select === true) {
 					document.getElementById("txtArea").value = "";
 					score = 0;
+					window.$(".upload-name").val("");
+					window.$("#file").val();
 
 					window.$(".reviewStars").css("color", "rgb(218, 237, 253)");
 					window.$("#star6").css("visibility", "hidden");
@@ -42,6 +44,8 @@ class Store extends Component {
 				if (select === true) {
 					document.getElementById("txtArea").value = "";
 					score = 0;
+					window.$(".upload-name").val("");
+					window.$("#file").val();
 
 					window.$(".reviewStars").css("color", "rgb(218, 237, 253)");
 					window.$("#star6").css("visibility", "hidden");
@@ -59,6 +63,8 @@ class Store extends Component {
 						/*리뷰 전송 ajax 여기다 쓰면됨*/
 						document.getElementById("txtArea").value = "";
 						score = 0;
+						window.$(".upload-name").val("");
+						window.$("#file").val();
 
 						window
 							.$(".reviewStars")
@@ -160,6 +166,17 @@ class Store extends Component {
 				window.$("#star6").css("color", "red");
 				window.$("#star7").css("color", "red");
 				window.$("#star8").css("color", "red");
+			});
+
+			window.$("#fileInput").on("change", function () {
+				var fileName = window.$("#file").val();
+				window.$(".upload-name").val(fileName);
+			});
+			var fileTarget = window.$("#file");
+			fileTarget.on("change", function () {
+				// 값이 변경되면
+				var cur = window.$(".filebox input[type='file']").val();
+				window.$(".upload-name").val(cur);
 			});
 		});
 	}
@@ -314,7 +331,19 @@ class Store extends Component {
 								id="txtArea"
 								required
 								placeholder="리뷰 내용을 입력해주세요"
+								onFocus
 							></textarea>
+						</div>
+						<hr />
+						<div class="filebox">
+							<label for="file">+</label>
+							<input type="file" id="file" />
+
+							<input
+								class="upload-name"
+								value="파일을 선택해주세요"
+								readOnly
+							/>
 						</div>
 						<hr />
 						<button id="cancel">취소</button>
