@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, {PureComponent} from "react";
 import "./AppIntro.css";
 import Home from "./Components/Owner/Home/Home";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -8,7 +8,7 @@ import App from "./App";
 import jQuery from "jquery";
 window.$ = window.jQuery = jQuery;
 
-class AppIntro extends Component {
+class AppIntro extends PureComponent {
 	componentDidMount() {
 		window.$(document).ready(function () {
 			window.$(".book").click(function () {

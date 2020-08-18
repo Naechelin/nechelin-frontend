@@ -1,9 +1,9 @@
-import React, {Component} from "react";
+import React, {PureComponent} from "react";
 import "./QRcodeScanner.css";
 import {Link} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faReply} from "@fortawesome/free-solid-svg-icons";
-class QRcodeScanner extends Component {
+class QRcodeScanner extends PureComponent {
 	render() {
 		return (
 			<div className="QRcodeScanner">

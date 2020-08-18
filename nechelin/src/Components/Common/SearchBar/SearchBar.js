@@ -1,9 +1,9 @@
-import React, {Component} from "react";
+import React, {PureComponent} from "react";
 import "./SearchBar.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faSearch} from "@fortawesome/free-solid-svg-icons";
 
-class SearchBar extends Component {
+class SearchBar extends PureComponent {
 	render() {
 		return (
 			<div className="SearchBar">

@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, {PureComponent} from "react";
 import "./Store.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
@@ -14,7 +14,7 @@ import ReviewCard from "../ReviewCard/ReviewCard";
 import jQuery from "jquery";
 window.$ = window.jQuery = jQuery;
 
-class Store extends Component {
+class Store extends PureComponent {
 	componentDidMount() {
 		window.$(document).ready(function () {
 			var score = 0;

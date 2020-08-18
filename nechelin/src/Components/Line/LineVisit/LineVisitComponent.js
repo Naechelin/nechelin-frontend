@@ -1,9 +1,9 @@
-import React, {Component} from "react";
+import React, {PureComponent} from "react";
 import "./LineVisitComponent.css";
 import {Link} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faStar} from "@fortawesome/free-solid-svg-icons";
-class LineVisitComponent extends Component {
+class LineVisitComponent extends PureComponent {
 	render() {
 		return (
 			<div className="LineVisitComponent">

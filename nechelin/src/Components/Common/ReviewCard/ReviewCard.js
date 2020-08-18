@@ -1,8 +1,8 @@
-import React, {Component} from "react";
+import React, {PureComponent} from "react";
 import "./ReviewCard.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faStar} from "@fortawesome/free-solid-svg-icons";
-class ReviewCard extends Component {
+class ReviewCard extends PureComponent {
 	render() {
 		return (
 			<div className="ReviewCard">

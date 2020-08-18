@@ -1,6 +1,6 @@
-import React, {Component} from "react";
+import React, {PureComponent} from "react";
 import Store from "../../Common/Store/Store";
-class MyStore extends Component {
+class MyStore extends PureComponent {
 	render() {
 		return (
 			<div>

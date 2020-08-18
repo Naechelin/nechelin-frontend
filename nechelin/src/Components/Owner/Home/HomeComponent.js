@@ -1,9 +1,9 @@
-import React, {Component} from "react";
+import React, {PureComponent} from "react";
 import "./HomeComponent.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faStar} from "@fortawesome/free-solid-svg-icons";
 
-class HomeComponent extends Component {
+class HomeComponent extends PureComponent {
 	render() {
 		return (
 			<div className="HomeComponent">

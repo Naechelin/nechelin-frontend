@@ -1,7 +1,7 @@
-import React, {Component} from "react";
+import React, {PureComponent} from "react";
 import "./LineHistoryComponent.css";
 
-class LineHistoryComponent extends Component {
+class LineHistoryComponent extends PureComponent {
 	render() {
 		return (
 			<div className="LineHistoryComponent">

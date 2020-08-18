@@ -1,9 +1,9 @@
-import React, {Component} from "react";
+import React, {PureComponent} from "react";
 import "./Home.css";
 import {Link} from "react-router-dom";
 import HomeComponent from "./HomeComponent";
 
-class Home extends Component {
+class Home extends PureComponent {
 	render() {
 		return (
 			<div className="Home">

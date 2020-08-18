@@ -1,6 +1,6 @@
-import React, {Component} from "react";
+import React, {PureComponent} from "react";
 
-class Chart extends Component {
+class Chart extends PureComponent {
 	render() {
 		return <div>Chart</div>;
 	}
