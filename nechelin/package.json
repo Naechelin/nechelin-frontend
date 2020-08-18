@@ -2,6 +2,7 @@
 	"name": "nechelin",
 	"version": "0.1.0",
 	"private": true,
+	"proxy": "https://www.nechelin.cf",
 	"dependencies": {
 		"@fortawesome/fontawesome-svg-core": "^1.2.30",
 		"@fortawesome/free-solid-svg-icons": "^5.14.0",
@@ -34,6 +35,7 @@
 			"not op_mini all"
 		],
 		"development": [
+			">0.2%",
 			"last 1 chrome version",
 			"last 1 firefox version",
 			"last 1 safari version"
