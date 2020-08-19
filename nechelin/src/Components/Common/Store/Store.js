@@ -17,6 +17,24 @@ window.$ = window.jQuery = jQuery;
 class Store extends PureComponent {
 	componentDidMount() {
 		window.$(document).ready(function () {
+			/* 매장의 리뷰 보여주는 아작스*/
+			window.$.ajax({
+				url:'http://localhost:8080/review/2/list',
+				type:'get',
+				dataType:"jsonp",
+				jsonp:"callback",
+				success:function(data){
+					var list = data.list;
+					for(let item in list){
+						console.log(list[item].reviewPac);
+						window.$("<li>"+"<ReviewCard/>"+"</li>").appendTo(".reviewOrder");
+					}
+				},
+				error:function(request,status,error){
+					alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+				}
+			})
+
 			var score = 0;
 			window.$("#addReview").click(function () {
 				window.$(".popUpBackground").css("visibility", "visible");
@@ -84,7 +102,22 @@ class Store extends PureComponent {
 				if (score !== 0) {
 					if (document.getElementById("txtArea").value.length !== 0) {
 						alert("리뷰가 등록되었습니다");
-						/*리뷰 전송 ajax 여기다 쓰면됨*/
+						/* 아래 아작스는 리뷰 등록 아작스*/
+						window.$.ajax({
+							url:'http://localhost:8080/review/1',
+							type:'post',
+							dataType:"jsonp",
+							jsonp:"callback",
+							data:{
+								writer:1,
+								reviewRating:score,
+								reviewPac:document.getElementById("txtArea").value,
+								reviewPhoto:window.$("#file").val()
+							},
+							success:function(data){
+								alert(data);
+							}
+						})
 						document.getElementById("txtArea").value = "";
 						score = 0;
 						window.$(".upload-name").val("파일을 선택해주세요");
@@ -202,6 +235,7 @@ class Store extends PureComponent {
 				var cur = window.$(".filebox input[type='file']").val();
 				window.$(".upload-name").val(cur);
 			});
+
 		});
 	}
 	render() {
@@ -375,40 +409,7 @@ class Store extends PureComponent {
 							등록
 						</button>
 					</div>
-					<ol>
-						<li>
-							<ReviewCard />
-						</li>
-						<li>
-							<ReviewCard />
-						</li>
-						<li>
-							<ReviewCard />
-						</li>
-						<li>
-							<ReviewCard />
-						</li>
-						<li>
-							<ReviewCard />
-						</li>
-						<li>
-							<ReviewCard />
-						</li>
-						<li>
-							<ReviewCard />
-						</li>
-						<li>
-							<ReviewCard />
-						</li>
-						<li>
-							<ReviewCard />
-						</li>
-						<li>
-							<ReviewCard />
-						</li>
-						<li>
-							<ReviewCard />
-						</li>
+					<ol className="reviewOrder">
 						<li>
 							<ReviewCard />
 						</li>
