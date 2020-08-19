@@ -17,19 +17,19 @@ window.$ = window.jQuery = jQuery;
 
 class Store extends PureComponent {
 	state = {
-		reviews : []
+		reviews: [],
 	};
 
-	loadReview = async () =>
-	{
+	loadReview = async () => {
 		// var storeId = this.props;
-		axios.get('/review/2/list')
-			.then((response) =>
-			{
-				this.setState({reviews:response.data.list});
+		axios
+			.get("/review/2/list")
+			.then((response) => {
+				this.setState({reviews: response.data.list});
 				console.log(response);
 			})
-			.catch(function (error) {console.log(error);
+			.catch(function (error) {
+				console.log(error);
 			});
 	};
 
@@ -106,20 +106,21 @@ class Store extends PureComponent {
 						alert("리뷰가 등록되었습니다");
 						/* 아래 아작스는 리뷰 등록 아작스*/
 						window.$.ajax({
-							url:'http:localhost/review/1',
-							type:'post',
-							dataType:"jsonp",
-							jsonp:"callback",
-							data:{
-								writer:1,
-								reviewRating:score,
-								reviewPac:document.getElementById("txtArea").value,
-								reviewPhoto:window.$("#file").val()
+							url: "http:localhost/review/1",
+							type: "post",
+							dataType: "jsonp",
+							jsonp: "callback",
+							data: {
+								writer: 1,
+								reviewRating: score,
+								reviewPac: document.getElementById("txtArea")
+									.value,
+								reviewPhoto: window.$("#file").val(),
 							},
-							success:function(data){
+							success: function (data) {
 								alert(data);
-							}
-						})
+							},
+						});
 						document.getElementById("txtArea").value = "";
 						score = 0;
 						window.$(".upload-name").val("파일을 선택해주세요");
@@ -237,13 +238,12 @@ class Store extends PureComponent {
 				var cur = window.$(".filebox input[type='file']").val();
 				window.$(".upload-name").val(cur);
 			});
-
 		});
 	}
 	render() {
 		const {reviews} = this.state;
 		console.log(reviews);
-		return(
+		return (
 			<div className="Store">
 				<div className="store">
 					<img
@@ -397,12 +397,12 @@ class Store extends PureComponent {
 							></textarea>
 						</div>
 						<hr />
-						<div class="filebox">
-							<label for="file">+</label>
+						<div className="filebox">
+							<label>+</label>
 							<input type="file" id="file" />
 
 							<input
-								class="upload-name"
+								className="upload-name"
 								value="파일을 선택해주세요"
 								readOnly
 							/>
@@ -413,16 +413,18 @@ class Store extends PureComponent {
 							등록
 						</button>
 					</div>
-					<ol className="reviewOrder">
-					</ol>
-					{reviews.map(element=>(<li><ReviewCard review={element}/></li>))}
+					<ol className="reviewOrder"></ol>
+					{reviews.map((element) => (
+						<li>
+							<ReviewCard review={element} />
+						</li>
+					))}
 				</div>
 				<a href="#backgroundPhoto">
 					<FontAwesomeIcon
 						icon={faArrowUp}
 						color="rgba(120, 102, 120, 0.5)"
 						id="arrowUp"
-						size="2xl"
 					/>
 				</a>
 			</div>

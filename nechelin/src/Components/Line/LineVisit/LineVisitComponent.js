@@ -10,7 +10,7 @@ class LineVisitComponent extends PureComponent {
 				<Link to="/App/Store?매장명">
 					<img src="/images/restaurant1.png" alt="사진" />
 					<label id="storeInfo">
-						매장명 <text id="foodStyle">중식</text>
+						매장명 <label id="foodStyle">중식</label>
 						<br />
 						<div className="stars">
 							<FontAwesomeIcon icon={faStar} color="#FFFF66" />
