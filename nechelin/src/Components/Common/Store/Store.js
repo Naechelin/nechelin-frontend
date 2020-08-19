@@ -19,21 +19,32 @@ class Store extends PureComponent {
 		window.$(document).ready(function () {
 			/* 매장의 리뷰 보여주는 아작스*/
 			window.$.ajax({
-				url:'http://localhost:8080/review/2/list',
-				type:'get',
-				dataType:"jsonp",
-				jsonp:"callback",
-				success:function(data){
+				url: "http://localhost:8080/review/2/list",
+				type: "get",
+				dataType: "jsonp",
+				jsonp: "callback",
+				success: function (data) {
 					var list = data.list;
-					for(let item in list){
+					for (let item in list) {
 						console.log(list[item].reviewPac);
-						window.$("<li>"+"<ReviewCard/>"+"</li>").appendTo(".reviewOrder");
+						window
+							.$("<li>" + "<ReviewCard/>" + "</li>")
+							.appendTo(".reviewOrder");
 					}
 				},
-				error:function(request,status,error){
-					alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
-				}
-			})
+				error: function (request, status, error) {
+					alert(
+						"code:" +
+							request.status +
+							"\n" +
+							"message:" +
+							request.responseText +
+							"\n" +
+							"error:" +
+							error
+					);
+				},
+			});
 
 			var score = 0;
 			window.$("#addReview").click(function () {
@@ -104,20 +115,21 @@ class Store extends PureComponent {
 						alert("리뷰가 등록되었습니다");
 						/* 아래 아작스는 리뷰 등록 아작스*/
 						window.$.ajax({
-							url:'http://localhost:8080/review/1',
-							type:'post',
-							dataType:"jsonp",
-							jsonp:"callback",
-							data:{
-								writer:1,
-								reviewRating:score,
-								reviewPac:document.getElementById("txtArea").value,
-								reviewPhoto:window.$("#file").val()
+							url: "http://localhost:8080/review/1",
+							type: "post",
+							dataType: "jsonp",
+							jsonp: "callback",
+							data: {
+								writer: 1,
+								reviewRating: score,
+								reviewPac: document.getElementById("txtArea")
+									.value,
+								reviewPhoto: window.$("#file").val(),
 							},
-							success:function(data){
+							success: function (data) {
 								alert(data);
-							}
-						})
+							},
+						});
 						document.getElementById("txtArea").value = "";
 						score = 0;
 						window.$(".upload-name").val("파일을 선택해주세요");
@@ -235,7 +247,6 @@ class Store extends PureComponent {
 				var cur = window.$(".filebox input[type='file']").val();
 				window.$(".upload-name").val(cur);
 			});
-
 		});
 	}
 	render() {
@@ -267,7 +278,7 @@ class Store extends PureComponent {
 							/>
 						</h2>
 						<h2 id="storeName">매장명</h2>
-						<text id="foodStyle">중식</text>
+						<label id="foodStyle">중식</label>
 						<br />
 						<ul>
 							<li>
@@ -312,8 +323,8 @@ class Store extends PureComponent {
 					</div>
 					<div className="popUpBackground" />
 					<div className="popUp">
-						<text id="reviewTitle">리뷰쓰기</text>
-						<text id="quit"> X </text>
+						<label id="reviewTitle">리뷰쓰기</label>
+						<label id="quit"> X </label>
 						<hr />
 						<img
 							src="/images/restaurant1.png"
@@ -327,7 +338,7 @@ class Store extends PureComponent {
 						</div>
 						<hr />
 						<label>
-							<text id="reviewStarsLabel">평점:</text>
+							<label id="reviewStarsLabel">평점:</label>
 							<FontAwesomeIcon
 								icon={faStar}
 								color="rgb(218, 237, 253)"
@@ -383,22 +394,22 @@ class Store extends PureComponent {
 						<hr />
 						<br />
 						<div id="writeArea">
-							<text id="writePlease">장단점을 적어주세요!</text>
+							<label id="writePlease">장단점을 적어주세요!</label>
 							<br />
 							<textarea
 								id="txtArea"
 								required
 								placeholder="리뷰 내용을 입력해주세요"
-								onFocus
+								autoFocus
 							></textarea>
 						</div>
 						<hr />
-						<div class="filebox">
-							<label for="file">+</label>
+						<div className="filebox">
+							<label>+</label>
 							<input type="file" id="file" />
 
 							<input
-								class="upload-name"
+								className="upload-name"
 								value="파일을 선택해주세요"
 								readOnly
 							/>
@@ -420,7 +431,6 @@ class Store extends PureComponent {
 						icon={faArrowUp}
 						color="rgba(120, 102, 120, 0.5)"
 						id="arrowUp"
-						size="2xl"
 					/>
 				</a>
 			</div>

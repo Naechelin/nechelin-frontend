@@ -8,16 +8,12 @@ class Login extends PureComponent {
 			<div className="Login">
 				<div id="paper" />
 				<div className="idDiv">
-					<label for="id" id="idLabel">
-						id
-					</label>
+					<label id="idLabel">id</label>
 					<input type="text" id="id" required />
 				</div>
 				<br />
 				<div className="pwdDiv">
-					<label for="pwd" id="pwdLabel">
-						password
-					</label>
+					<label id="pwdLabel">password</label>
 					<input type="password" id="pwd" required />
 				</div>
 				<br />
