@@ -5,13 +5,17 @@ import Line from "../../Line/Line/Line";
 import Map from "../../Map/Map/Map";
 import Coupon from "../../Coupon/Coupon/Coupon";
 import Store from "../../Common/Store/Store";
+import Login from "../../Common/Login/Login";
 class UserAppMiddle extends PureComponent {
 	render() {
 		return (
 			<div className="UserAppMiddle">
 				<Switch>
 					<Route exact path="/">
-						<Line />
+						<Login />
+					</Route>
+					<Route exact path="/Login">
+						<Login />
 					</Route>
 					<Route exact path="/App">
 						<Line />
