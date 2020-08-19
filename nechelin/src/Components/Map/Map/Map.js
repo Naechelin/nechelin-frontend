@@ -8,6 +8,7 @@ import jQuery from "jquery";
 import axios from "axios";
 window.$ = window.jQuery = jQuery;
 const {kakao} = window;
+
 class Map extends PureComponent {
 	state = {
 		likey: [],
@@ -16,8 +17,7 @@ class Map extends PureComponent {
 	};
 
 	loadLikey = async () => {
-		axios
-			.get("/like/list")
+		axios.get("/likey/list")
 			.then((response) => {
 				this.setState({likey: response.data.list});
 			})
@@ -27,8 +27,7 @@ class Map extends PureComponent {
 	};
 
 	loadNaechelin = async () => {
-		axios
-			.get("/naechelin")
+		axios.get("/naechelin")
 			.then((response) => {
 				this.setState({nechelin: response.data.list});
 			})
@@ -38,8 +37,7 @@ class Map extends PureComponent {
 	};
 
 	loadGuide = async () => {
-		axios
-			.get("/naechelin/all")
+		axios.get("/naechelin/all")
 			.then((response) => {
 				this.setState({guide: response.data.list});
 			})
@@ -49,43 +47,8 @@ class Map extends PureComponent {
 	};
 
 	componentDidMount() {
+		let jeonka = this;
 		window.$(document).ready(function () {
-			window.$("#likey").click(function () {
-				window
-					.$("#likey")
-					.css("background-color", "rgba(255, 255, 132, 0.7)");
-
-				window
-					.$("#nechelin")
-					.css("background-color", "rgba(255, 255, 255, 0.8)");
-				window
-					.$("#guide")
-					.css("background-color", "rgba(255, 255, 255, 0.8)");
-			});
-			window.$("#nechelin").click(function () {
-				window
-					.$("#nechelin")
-					.css("background-color", "rgba(255, 161, 132, 0.7)");
-
-				window
-					.$("#likey")
-					.css("background-color", "rgba(255, 255, 255, 0.8)");
-				window
-					.$("#guide")
-					.css("background-color", "rgba(255, 255, 255, 0.8)");
-			});
-			window.$("#guide").click(function () {
-				window
-					.$("#guide")
-					.css("background-color", "rgba(187, 255, 132, 0.7)");
-
-				window
-					.$("#likey")
-					.css("background-color", "rgba(255, 255, 255, 0.8)");
-				window
-					.$("#nechelin")
-					.css("background-color", "rgba(255, 255, 255, 0.8)");
-			});
 			kakao.maps.load(() => {
 				let container = document.getElementById("map");
 				let options = {
@@ -166,6 +129,8 @@ class Map extends PureComponent {
 
 				for (var i = 0; i < places.length; i++) {
 					// 마커를 생성하고 지도에 표시합니다
+					console.log(places[i].x+":"+places[i].y);
+
 					var placePosition = new kakao.maps.LatLng(
 							places[i].y,
 							places[i].x
@@ -235,10 +200,50 @@ class Map extends PureComponent {
 				};
 				return item;
 			}
-			// <label from="check">
-			// 	<input type="radio" id="likeyCheck" value>관심매장 보기</input>
-			// </label>
+			window.$("#likey").click(function () {
+				jeonka.loadLikey();
+				displayPlaces(jeonka.state.likey);
+
+				window
+					.$("#likey")
+					.css("background-color", "rgba(255, 255, 132, 0.7)");
+
+				window
+					.$("#nechelin")
+					.css("background-color", "rgba(255, 255, 255, 0.8)");
+				window
+					.$("#guide")
+					.css("background-color", "rgba(255, 255, 255, 0.8)");
+
+
+			});
+			window.$("#nechelin").click(function () {
+				window
+					.$("#nechelin")
+					.css("background-color", "rgba(255, 161, 132, 0.7)");
+
+				window
+					.$("#likey")
+					.css("background-color", "rgba(255, 255, 255, 0.8)");
+				window
+					.$("#guide")
+					.css("background-color", "rgba(255, 255, 255, 0.8)");
+			});
+			window.$("#guide").click(function () {
+				window
+					.$("#guide")
+					.css("background-color", "rgba(187, 255, 132, 0.7)");
+
+				window
+					.$("#likey")
+					.css("background-color", "rgba(255, 255, 255, 0.8)");
+				window
+					.$("#nechelin")
+					.css("background-color", "rgba(255, 255, 255, 0.8)");
+			});
+
 		});
+
 	}
 	render() {
 		return (

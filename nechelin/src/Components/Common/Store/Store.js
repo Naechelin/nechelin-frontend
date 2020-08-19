@@ -242,7 +242,7 @@ class Store extends PureComponent {
 	}
 	render() {
 		const {reviews} = this.state;
-		console.log(reviews);
+
 		return (
 			<div className="Store">
 				<div className="store">
