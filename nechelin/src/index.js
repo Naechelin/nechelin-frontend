@@ -13,7 +13,7 @@ ReactDOM.render(
 				<Route exact path="/">
 					<AppIntro />
 				</Route>
-				<Route path="/App">
+				<Route path="/Login">
 					<App />
 				</Route>
 			</Switch>

@@ -6,13 +6,17 @@ import Chart from "../../Owner/Chart/Chart";
 import MyStore from "../../Owner/MyStore/MyStore";
 import QRcodeScanner from "../../Owner/QRcodeScanner/QRcodeScanner";
 import StampByPhoneNumber from "../../Owner/StampByPhoneNumber/StampByPhoneNumber";
+import Login from "../../Common/Login/Login";
 class OwnerAppMiddle extends PureComponent {
 	render() {
 		return (
 			<div className="OwnerAppMiddle">
 				<Switch>
 					<Route exact path="/">
-						<Home />
+						<Login />
+					</Route>
+					<Route exact path="/Login">
+						<Login />
 					</Route>
 					<Route exact path="/App">
 						<Home />

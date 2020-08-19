@@ -18,7 +18,7 @@ class ReviewCard extends PureComponent {
 					<FontAwesomeIcon icon={faStar} color="red" /> 4.8
 				</div>
 				<br />
-				<text id="writter">tlfzgjadyd</text>
+				<label id="writter">tlfzgjadyd</label>
 				<br />
 				<div className="profileDiv"></div>
 				<div className="text">맛있었다 </div>

@@ -7,7 +7,7 @@ class AppIntro extends PureComponent {
 	componentDidMount() {
 		window.$(document).ready(function () {
 			window.$(".book").click(function () {
-				window.location.assign("/App");
+				window.location.assign("/Login");
 			});
 		});
 	}
