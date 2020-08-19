@@ -1,4 +1,6 @@
 .CouponComponent {
+	position: relative;
+	z-index: 0;
 	max-width: 95%;
 	min-height: 170px;
 	max-height: 240px;
