@@ -1,6 +1,7 @@
 import React, {PureComponent} from "react";
 import "./Store.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import axios from "axios";
 import {
 	faUtensils,
 	faStar,
@@ -15,37 +16,27 @@ import jQuery from "jquery";
 window.$ = window.jQuery = jQuery;
 
 class Store extends PureComponent {
+	state = {
+		reviews : []
+	};
+
+	loadReview = async () =>
+	{
+		// var storeId = this.props;
+		axios.get('/review/2/list')
+			.then((response) =>
+			{
+				this.setState({reviews:response.data.list});
+				console.log(response);
+			})
+			.catch(function (error) {console.log(error);
+			});
+	};
+
 	componentDidMount() {
+		this.loadReview();
 		window.$(document).ready(function () {
 			/* 매장의 리뷰 보여주는 아작스*/
-			window.$.ajax({
-				url: "http://localhost:8080/review/2/list",
-				type: "get",
-				dataType: "jsonp",
-				jsonp: "callback",
-				success: function (data) {
-					var list = data.list;
-					for (let item in list) {
-						console.log(list[item].reviewPac);
-						window
-							.$("<li>" + "<ReviewCard/>" + "</li>")
-							.appendTo(".reviewOrder");
-					}
-				},
-				error: function (request, status, error) {
-					alert(
-						"code:" +
-							request.status +
-							"\n" +
-							"message:" +
-							request.responseText +
-							"\n" +
-							"error:" +
-							error
-					);
-				},
-			});
-
 			var score = 0;
 			window.$("#addReview").click(function () {
 				window.$(".popUpBackground").css("visibility", "visible");
@@ -115,21 +106,20 @@ class Store extends PureComponent {
 						alert("리뷰가 등록되었습니다");
 						/* 아래 아작스는 리뷰 등록 아작스*/
 						window.$.ajax({
-							url: "http://localhost:8080/review/1",
-							type: "post",
-							dataType: "jsonp",
-							jsonp: "callback",
-							data: {
-								writer: 1,
-								reviewRating: score,
-								reviewPac: document.getElementById("txtArea")
-									.value,
-								reviewPhoto: window.$("#file").val(),
+							url:'http:localhost/review/1',
+							type:'post',
+							dataType:"jsonp",
+							jsonp:"callback",
+							data:{
+								writer:1,
+								reviewRating:score,
+								reviewPac:document.getElementById("txtArea").value,
+								reviewPhoto:window.$("#file").val()
 							},
-							success: function (data) {
+							success:function(data){
 								alert(data);
-							},
-						});
+							}
+						})
 						document.getElementById("txtArea").value = "";
 						score = 0;
 						window.$(".upload-name").val("파일을 선택해주세요");
@@ -247,10 +237,13 @@ class Store extends PureComponent {
 				var cur = window.$(".filebox input[type='file']").val();
 				window.$(".upload-name").val(cur);
 			});
+
 		});
 	}
 	render() {
-		return (
+		const {reviews} = this.state;
+		console.log(reviews);
+		return(
 			<div className="Store">
 				<div className="store">
 					<img
@@ -277,7 +270,7 @@ class Store extends PureComponent {
 								id="silver"
 							/>
 						</h2>
-						<h2 id="storeName">매장명</h2>
+						<h2 id="storeName">{this.props.title}</h2>
 						<label id="foodStyle">중식</label>
 						<br />
 						<ul>
@@ -404,12 +397,12 @@ class Store extends PureComponent {
 							></textarea>
 						</div>
 						<hr />
-						<div className="filebox">
-							<label>+</label>
+						<div class="filebox">
+							<label for="file">+</label>
 							<input type="file" id="file" />
 
 							<input
-								className="upload-name"
+								class="upload-name"
 								value="파일을 선택해주세요"
 								readOnly
 							/>
@@ -421,16 +414,15 @@ class Store extends PureComponent {
 						</button>
 					</div>
 					<ol className="reviewOrder">
-						<li>
-							<ReviewCard />
-						</li>
 					</ol>
+					{reviews.map(element=>(<li><ReviewCard review={element}/></li>))}
 				</div>
 				<a href="#backgroundPhoto">
 					<FontAwesomeIcon
 						icon={faArrowUp}
 						color="rgba(120, 102, 120, 0.5)"
 						id="arrowUp"
+						size="2xl"
 					/>
 				</a>
 			</div>
