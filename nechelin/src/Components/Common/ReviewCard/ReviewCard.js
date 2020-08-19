@@ -3,6 +3,7 @@ import "./ReviewCard.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faStar} from "@fortawesome/free-solid-svg-icons";
 class ReviewCard extends PureComponent {
+
 	render() {
 		const reviewStar =[];
 		const naechelin =[];
