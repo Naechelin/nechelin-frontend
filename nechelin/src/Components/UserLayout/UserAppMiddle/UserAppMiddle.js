@@ -33,7 +33,7 @@ class UserAppMiddle extends PureComponent {
 						<Coupon />
 					</Route>
 					<Route path="/App/Store">
-						<Store />
+						<Store  />
 					</Route>
 				</Switch>
 			</div>
