@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import UserAppHeader from "./Components/UserLayout/UserAppHeader/UserAppHeader";
 import UserAppMiddle from "./Components/UserLayout/UserAppMiddle/UserAppMiddle";
 import UserAppFooter from "./Components/UserLayout/UserAppFooter/UserAppFooter";
@@ -7,7 +7,7 @@ import OwnerAppHeader from "./Components/OwnerLayout/OwnerAppHeader/OwnerAppHead
 import OwnerAppMiddle from "./Components/OwnerLayout/OwnerAppMiddle/OwnerAppMiddle";
 import OwnerAppFooter from "./Components/OwnerLayout/OwnerAppFooter/OwnerAppFooter";
 import "./App.css";
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {BrowserRouter as Router} from "react-router-dom";
 import jQuery from "jquery";
 window.$ = window.jQuery = jQuery;
 

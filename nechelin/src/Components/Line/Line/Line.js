@@ -3,17 +3,8 @@ import "./Line.css";
 import SearchBar from "../../Common/SearchBar/SearchBar";
 import {Link} from "react-router-dom";
 import LineShow from "../LineShow/LineShow";
-import jQuery from "jquery";
-window.$ = window.jQuery = jQuery;
 
 class Line extends PureComponent {
-	componentDidMount() {
-		window.$(document).ready(function () {
-			window.$("#LineEdit").click(function () {
-				alert("라인편집");
-			});
-		});
-	}
 	render() {
 		return (
 			<div className="Line">
