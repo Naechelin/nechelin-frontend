@@ -6,21 +6,31 @@ class Login extends PureComponent {
 	render() {
 		return (
 			<div className="Login">
+				<div id="paper" />
 				<div className="idDiv">
 					<label for="id" id="idLabel">
-						id:
+						id
 					</label>
-					<input type="text" id="id" />
+					<input type="text" id="id" required />
 				</div>
 				<br />
 				<div className="pwdDiv">
-					<label for="pwd">password : </label>
-					<input type="password" id="pwd" />
+					<label for="pwd" id="pwdLabel">
+						password
+					</label>
+					<input type="password" id="pwd" required />
 				</div>
 				<br />
-				<label for="checkbox">자동로그인 </label>
-				<input type="checkbox" id="checkbox" />
+				<div className="Account">
+					<label id="AccountRegister">아이디 / 비밀번호 찾기</label>
+					<label id="AccountFind">회원가입하기</label>
+				</div>
 				<br />
+
+				<button type="button" id="cancel">
+					취소
+				</button>
+
 				<Link to="/App">
 					<button type="submit" id="confirm">
 						확인
