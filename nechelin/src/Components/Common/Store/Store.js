@@ -10,6 +10,7 @@ import {
 	faMapMarkerAlt,
 	faCalendarCheck,
 	faArrowUp,
+	faRubleSign,
 } from "@fortawesome/free-solid-svg-icons";
 import ReviewCard from "../ReviewCard/ReviewCard";
 import jQuery from "jquery";
@@ -36,6 +37,31 @@ class Store extends PureComponent {
 	componentDidMount() {
 		this.loadReview();
 		window.$(document).ready(function () {
+			let flag = false;
+			window.$("#addLikey").click(function () {
+				if (flag === false) {
+					window
+						.$("#addLikey")
+						.css("border", "1.5px solid rgba(255,236,66,0.7)");
+					window
+						.$("#likeyIcon")
+						.attr("color", "rgba(255,236,66,0.8)");
+					window.$("#addLikey").css("background-color", "white");
+					window
+						.$("#addLikey")
+						.css("box-shadow", "0px 0px 3px yellow");
+
+					flag = true;
+				} else {
+					window
+						.$("#addLikey")
+						.css("border", "1.5px solid rgb(194,194,194)");
+					window.$("#likeyIcon").attr("color", "rgb(194,194,194)");
+					window.$("#addLikey").css("box-shadow", "none");
+
+					flag = false;
+				}
+			});
 			/* 매장의 리뷰 보여주는 아작스*/
 			var score = 0;
 			window.$("#addReview").click(function () {
@@ -272,6 +298,13 @@ class Store extends PureComponent {
 						</h2>
 						<h2 id="storeName">{this.props.title}</h2>
 						<label id="foodStyle">중식</label>
+						<button id="addLikey">
+							<FontAwesomeIcon
+								icon={faStar}
+								color="rgb(194,194,194)"
+								id="likeyIcon"
+							/>
+						</button>
 						<br />
 						<ul>
 							<li>

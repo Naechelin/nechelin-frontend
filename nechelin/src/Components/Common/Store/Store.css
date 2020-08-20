@@ -37,6 +37,18 @@
 	margin-top: 15px;
 	margin-right: 170px;
 }
+.Store #addLikey {
+	position: relative;
+	float: right;
+	margin-right: -100px;
+	top: -5px;
+	width: 30px;
+	height: 30px;
+	border: 1.5px solid rgb(194, 194, 194);
+	background-color: rgba(255, 255, 255, 0);
+	border-radius: 100%;
+	margin-top: 8px;
+}
 
 .Store ul {
 	font-size: 14px;
