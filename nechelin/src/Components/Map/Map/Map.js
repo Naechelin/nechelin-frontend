@@ -16,35 +16,39 @@ class Map extends PureComponent {
 		guide: [],
 	};
 
-	loadLikey = async () => {
+	loadLikey = async (callback) => {
 		axios.get("/likey/list")
 			.then((response) => {
 				this.setState({likey: response.data.list});
+				callback(this.state.likey);
 			})
 			.catch(function (error) {
 				console.log(error);
 			});
 	};
 
-	loadNaechelin = async () => {
+	loadNaechelin = async (callback) => {
 		axios.get("/naechelin")
 			.then((response) => {
 				this.setState({naechelin: response.data.list});
+				callback(this.state.naechelin);
 			})
 			.catch(function (error) {
 				console.log(error);
 			});
 	};
 
-	loadGuide = async () => {
+	loadGuide = async (callback) => {
 		axios.get("/naechelin/all")
 			.then((response) => {
 				this.setState({guide: response.data.list});
+				callback(this.state.guide);
 			})
 			.catch(function (error) {
 				console.log(error);
 			});
 	};
+
 
 	componentDidMount() {
 		let jeonka = this;
@@ -117,6 +121,7 @@ class Map extends PureComponent {
 				var fragment = document.createDocumentFragment(),
 					bounds = new kakao.maps.LatLngBounds(),
 					listStr = "";
+
 
 				// 지도에 표시되고 있는 마커를 제거합니다
 				removeMarker();
@@ -195,9 +200,7 @@ class Map extends PureComponent {
 				return item;
 			}
 			window.$("#likey").click(function () {
-				jeonka.loadLikey();
-				displayPlaces(jeonka.state.likey);
-
+				jeonka.loadLikey(displayPlaces);
 				window
 					.$("#likey")
 					.css("background-color", "rgba(255, 255, 132, 0.7)");
@@ -212,8 +215,7 @@ class Map extends PureComponent {
 
 			});
 			window.$("#nechelin").click(function () {
-				jeonka.loadNaechelin();
-				displayPlaces(jeonka.state.naechelin);
+				jeonka.loadNaechelin(displayPlaces);
 				window
 					.$("#nechelin")
 					.css("background-color", "rgba(255, 161, 132, 0.7)");
@@ -226,8 +228,7 @@ class Map extends PureComponent {
 					.css("background-color", "rgba(255, 255, 255, 0.8)");
 			});
 			window.$("#guide").click(function () {
-				jeonka.loadGuide();
-				displayPlaces(jeonka.state.guide);
+
 				window
 					.$("#guide")
 					.css("background-color", "rgba(187, 255, 132, 0.7)");
@@ -238,6 +239,7 @@ class Map extends PureComponent {
 				window
 					.$("#nechelin")
 					.css("background-color", "rgba(255, 255, 255, 0.8)");
+				jeonka.loadGuide(displayPlaces);
 			});
 
 		});
