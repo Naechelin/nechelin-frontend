@@ -2,6 +2,8 @@
 	float: left;
 	border-radius: 5px;
 	border: 1px solid rgb(189, 185, 185);
+	height: 60px;
+	top: 1px;
 }
 .SearchBar button {
 	float: left;

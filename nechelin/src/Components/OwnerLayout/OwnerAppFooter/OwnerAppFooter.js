@@ -4,6 +4,8 @@ import "./OwnerAppFooter.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faHome, faChartPie, faStore} from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
+import jQuery from "jquery";
+window.$ = window.jQuery = jQuery;
 
 class OwnerAppFooter extends PureComponent {
 	constructor(props) {
@@ -14,38 +16,59 @@ class OwnerAppFooter extends PureComponent {
 		};
 	}
 	changeMenu(choose) {}
+	componentDidMount() {
+		window.$(document).ready(function () {
+			window.$("#HomeBtn").click(function () {
+				window.$("#HomeIcon").css("color", "rgb(163,216,254)");
+				window.$("#ChartIcon").css("color", "white");
+				window.$("#MyStoreIcon").css("color", "white");
+			});
+			window.$("#ChartBtn").click(function () {
+				window.$("#HomeIcon").css("color", "white");
+				window.$("#ChartIcon").css("color", "rgb(163,216,254)");
+				window.$("#MyStoreIcon").css("color", "white");
+			});
+			window.$("#CouponBtn").click(function () {
+				window.$("#HomeIcon").css("color", "white");
+				window.$("#ChartIcon").css("color", "white");
+				window.$("#MyStoreIcon").css("color", "rgb(163,216,254)");
+			});
+		});
+	}
 	render() {
 		return (
 			<div className="OwnerAppFooter">
 				<Link to="/App/Home">
-					<button>
+					<button id="HomeBtn">
 						<FontAwesomeIcon
 							icon={faHome}
 							size="2x"
 							color="white"
-							onClick={this.changeMenu(1)}
+							id="HomeIcon"
 						/>
 						<br />홈
 					</button>
 				</Link>
 
 				<Link to="/App/Chart">
-					<button>
+					<button id="CharBtn">
 						<FontAwesomeIcon
 							icon={faChartPie}
 							size="2x"
 							color="skyblue"
+							id="ChartIcon"
 						/>
 						<br />
 						분석 차트
 					</button>
 				</Link>
 				<Link to="/App/MyStore">
-					<button>
+					<button id="MyStoreBtn">
 						<FontAwesomeIcon
 							icon={faStore}
 							size="2x"
 							color="white"
+							id="MyStoreIcon"
 						/>
 						<br />내 매장
 					</button>

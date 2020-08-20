@@ -3,7 +3,7 @@
 }
 .Coupon span {
 	padding: 4px;
-	border: 1px solid rgb(189, 185, 185);
+	border: 1px solid rgb(220, 220, 220);
 	border-bottom: none;
 }
 .Coupon .CouponTab {
@@ -14,7 +14,13 @@
 	margin-top: 10px;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
-	background-color: #ffffa6;
+}
+
+.Coupon #availTab {
+	background-color: rgb(207, 255, 159);
+}
+.Coupon #historyTab {
+	background-color: #ffffb6;
 }
 .Coupon ol {
 	height: 570px;

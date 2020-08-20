@@ -43,12 +43,13 @@
 	z-index: 1000;
 	top: 230px;
 	right: 90px;
+	float: right;
 	color: rgb(54, 54, 54);
 	border-radius: 100px;
 	width: 90px;
 	height: 30px;
 	border: 1px solid rgb(214, 214, 214);
-	float: right;
+
 	padding: 5px;
 	font-size: 12px;
 
@@ -57,18 +58,51 @@
 }
 .Line span {
 	float: left;
-	border: 1px solid rgb(189, 185, 185);
+	border: 1px solid rgb(220, 220, 220);
 	border-bottom: none;
 	padding: 4px;
+}
+
+.Line #goBack {
+	float: left;
+	margin-left: 15px;
+	color: rgb(54, 54, 54);
+	border-radius: 100px;
+	width: 90px;
+	height: 30px;
+	border: 1px solid rgb(214, 214, 214);
+	padding: 5px;
+	font-size: 12px;
+
+	background-color: #ffffd6;
+	box-shadow: 1px 1px 2px gray;
+	text-align: center;
+	padding-top: 7px;
+	display: none;
+}
+.Line #toDoLabel {
+	float: left;
+	margin-left: 15px;
+	margin-top: 6px;
+	display: none;
+	margin-bottom: 11px;
 }
 .Line .LinkTab {
 	float: left;
 	color: black;
-	background-color: #ffffa6;
+	background-color: #ffffb6;
 	padding: 10px;
 	margin-left: 1px;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
+	display: inline;
+}
+
+.Line #visitTab {
+	background-color: rgb(207, 255, 159);
+}
+.Line #historyTab {
+	background-color: #ffffb6;
 }
 
 .Line ol {

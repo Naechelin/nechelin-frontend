@@ -17,7 +17,8 @@ class Map extends PureComponent {
 	};
 
 	loadLikey = async () => {
-		axios.get("/likey/list")
+		axios
+			.get("/likey/list")
 			.then((response) => {
 				this.setState({likey: response.data.list});
 			})
@@ -27,7 +28,8 @@ class Map extends PureComponent {
 	};
 
 	loadNaechelin = async () => {
-		axios.get("/naechelin")
+		axios
+			.get("/naechelin")
 			.then((response) => {
 				this.setState({naechelin: response.data.list});
 			})
@@ -37,7 +39,8 @@ class Map extends PureComponent {
 	};
 
 	loadGuide = async () => {
-		axios.get("/naechelin/all")
+		axios
+			.get("/naechelin/all")
 			.then((response) => {
 				this.setState({guide: response.data.list});
 			})
@@ -56,7 +59,6 @@ class Map extends PureComponent {
 				};
 				window.map = new kakao.maps.Map(container, options);
 
-
 				// 지도 확대, 축소 컨트롤에서 확대 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
 				function zoomIn() {
 					window.map.setLevel(window.map.getLevel() - 1);
@@ -67,10 +69,10 @@ class Map extends PureComponent {
 					window.map.setLevel(window.map.getLevel() + 1);
 				}
 
-				window.$("#zoomin").click(function(){
+				window.$("#zoomin").click(function () {
 					zoomIn();
 				});
-				window.$("#zoomout").click(function(){
+				window.$("#zoomout").click(function () {
 					zoomOut();
 				});
 			});
@@ -123,7 +125,7 @@ class Map extends PureComponent {
 
 				for (var i = 0; i < places.length; i++) {
 					// 마커를 생성하고 지도에 표시합니다
-					console.log(places[i].x+":"+places[i].y);
+					console.log(places[i].x + ":" + places[i].y);
 
 					var placePosition = new kakao.maps.LatLng(
 							places[i].y,
@@ -208,8 +210,6 @@ class Map extends PureComponent {
 				window
 					.$("#guide")
 					.css("background-color", "rgba(255, 255, 255, 0.8)");
-
-
 			});
 			window.$("#nechelin").click(function () {
 				jeonka.loadNaechelin();
@@ -239,9 +239,7 @@ class Map extends PureComponent {
 					.$("#nechelin")
 					.css("background-color", "rgba(255, 255, 255, 0.8)");
 			});
-
 		});
-
 	}
 	render() {
 		return (
@@ -294,8 +292,8 @@ class Map extends PureComponent {
 						<br />
 						<label id="guideLabel">내슐랭 가이드</label>
 					</label>
-					<input type="button" id="zoomin" value="-"/>
-					<input type="button" id="zoomout" value="+"/>
+					<input type="button" id="zoomin" value="+" />
+					<input type="button" id="zoomout" value="-" />
 				</div>
 			</div>
 		);

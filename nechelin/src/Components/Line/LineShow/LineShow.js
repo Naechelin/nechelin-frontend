@@ -2,6 +2,7 @@ import React, {PureComponent} from "react";
 import LineVisit from "../LineVisit/LineVisit";
 import LineHistory from "../LineHistory/LineHistory";
 import {Switch, Route} from "react-router-dom";
+import LineEdit from "../LineEdit/LineEdit";
 
 class LineShow extends PureComponent {
 	render() {
@@ -22,6 +23,9 @@ class LineShow extends PureComponent {
 					</Route>
 					<Route path="/App/Line/LineHistory">
 						<LineHistory />
+					</Route>
+					<Route path="/App/Line/LineEdit">
+						<LineEdit />
 					</Route>
 				</Switch>
 			</div>
