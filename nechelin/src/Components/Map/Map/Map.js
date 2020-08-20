@@ -29,7 +29,7 @@ class Map extends PureComponent {
 	loadNaechelin = async () => {
 		axios.get("/naechelin")
 			.then((response) => {
-				this.setState({nechelin: response.data.list});
+				this.setState({naechelin: response.data.list});
 			})
 			.catch(function (error) {
 				console.log(error);
@@ -56,19 +56,6 @@ class Map extends PureComponent {
 				};
 				window.map = new kakao.maps.Map(container, options);
 
-				function setMapType(maptype) {
-					var roadmapControl = document.getElementById("btnRoadmap");
-					var skyviewControl = document.getElementById("btnSkyview");
-					if (maptype === "roadmap") {
-						window.map.setMapTypeId(kakao.maps.MapTypeId.ROADMAP);
-						roadmapControl.className = "selected_btn";
-						skyviewControl.className = "btn";
-					} else {
-						window.map.setMapTypeId(kakao.maps.MapTypeId.HYBRID);
-						skyviewControl.className = "selected_btn";
-						roadmapControl.className = "btn";
-					}
-				}
 
 				// 지도 확대, 축소 컨트롤에서 확대 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
 				function zoomIn() {
@@ -79,6 +66,13 @@ class Map extends PureComponent {
 				function zoomOut() {
 					window.map.setLevel(window.map.getLevel() + 1);
 				}
+
+				window.$("#zoomin").click(function(){
+					zoomIn();
+				});
+				window.$("#zoomout").click(function(){
+					zoomOut();
+				});
 			});
 
 			var markers = [];
@@ -218,6 +212,8 @@ class Map extends PureComponent {
 
 			});
 			window.$("#nechelin").click(function () {
+				jeonka.loadNaechelin();
+				displayPlaces(jeonka.state.naechelin);
 				window
 					.$("#nechelin")
 					.css("background-color", "rgba(255, 161, 132, 0.7)");
@@ -230,6 +226,8 @@ class Map extends PureComponent {
 					.css("background-color", "rgba(255, 255, 255, 0.8)");
 			});
 			window.$("#guide").click(function () {
+				jeonka.loadGuide();
+				displayPlaces(jeonka.state.guide);
 				window
 					.$("#guide")
 					.css("background-color", "rgba(187, 255, 132, 0.7)");
@@ -296,6 +294,8 @@ class Map extends PureComponent {
 						<br />
 						<label id="guideLabel">내슐랭 가이드</label>
 					</label>
+					<input type="button" id="zoomin" value="-"/>
+					<input type="button" id="zoomout" value="+"/>
 				</div>
 			</div>
 		);

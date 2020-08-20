@@ -107,6 +107,27 @@
 	position: absolute;
 	top: 0px;
 	z-index: 0;
-	width: 99.5%;
-	height: 590px;
+	top: 5px;
+	left : 5px;
+	width: 95%;
+	height: 500px;
+}
+
+.Map #zoomin {
+	position: absolute;
+	float: left;
+	left: 5px;
+	top: 80px;
+	width: 30px;
+	height: 30px;
+	font-size: 14px;
+}
+.Map #zoomout {
+	position: absolute;
+	float: left;
+	left: 55px;
+	top: 80px;
+	width: 30px;
+	height:30px;
+	font-size: 14px;
 }
