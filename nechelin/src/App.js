@@ -12,7 +12,7 @@ import jQuery from "jquery";
 window.$ = window.jQuery = jQuery;
 
 function App() {
-	let member_type = "customer";
+	let member_type = "owner";
 	if (member_type === "customer")
 		return (
 			<div>

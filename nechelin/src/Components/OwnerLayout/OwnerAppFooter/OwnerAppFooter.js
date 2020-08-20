@@ -15,7 +15,6 @@ class OwnerAppFooter extends PureComponent {
 			choose: 1,
 		};
 	}
-	changeMenu(choose) {}
 	componentDidMount() {
 		window.$(document).ready(function () {
 			window.$("#HomeBtn").click(function () {
@@ -28,7 +27,7 @@ class OwnerAppFooter extends PureComponent {
 				window.$("#ChartIcon").css("color", "rgb(163,216,254)");
 				window.$("#MyStoreIcon").css("color", "white");
 			});
-			window.$("#CouponBtn").click(function () {
+			window.$("#MyStoreBtn").click(function () {
 				window.$("#HomeIcon").css("color", "white");
 				window.$("#ChartIcon").css("color", "white");
 				window.$("#MyStoreIcon").css("color", "rgb(163,216,254)");
@@ -43,7 +42,7 @@ class OwnerAppFooter extends PureComponent {
 						<FontAwesomeIcon
 							icon={faHome}
 							size="2x"
-							color="white"
+							color="rgb(163,216,254)"
 							id="HomeIcon"
 						/>
 						<br />홈
@@ -51,11 +50,11 @@ class OwnerAppFooter extends PureComponent {
 				</Link>
 
 				<Link to="/App/Chart">
-					<button id="CharBtn">
+					<button id="ChartBtn">
 						<FontAwesomeIcon
 							icon={faChartPie}
 							size="2x"
-							color="skyblue"
+							color="white"
 							id="ChartIcon"
 						/>
 						<br />
