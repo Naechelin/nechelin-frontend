@@ -46,10 +46,10 @@ class Store extends PureComponent {
 					window
 						.$("#likeyIcon")
 						.attr("color", "rgba(255,236,66,0.8)");
-					window.$("#addLikey").css("background-color", "white");
 					window
 						.$("#addLikey")
 						.css("box-shadow", "0px 0px 3px yellow");
+					window.$("#addLikey").css("background-color", "white");
 
 					flag = true;
 				} else {
@@ -58,11 +58,13 @@ class Store extends PureComponent {
 						.css("border", "1.5px solid rgb(194,194,194)");
 					window.$("#likeyIcon").attr("color", "rgb(194,194,194)");
 					window.$("#addLikey").css("box-shadow", "none");
-
+					window
+						.$("#addLikey")
+						.css("background-color", "rgba(255,255,255,0");
 					flag = false;
 				}
 			});
-			/* 매장의 리뷰 보여주는 아작스*/
+
 			var score = 0;
 			window.$("#addReview").click(function () {
 				window.$(".popUpBackground").css("visibility", "visible");
